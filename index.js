@@ -26,6 +26,7 @@ function initCursorParallax() {
   let currentY = 0;
 
   window.addEventListener('mousemove', (e) => {
+    if (window.innerWidth < 768) return; // Disable parallax on mobile touch screens
     const rect = stage.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
@@ -35,20 +36,22 @@ function initCursorParallax() {
   });
 
   function renderParallax() {
-    currentX += (mouseX - currentX) * 0.08;
-    currentY += (mouseY - currentY) * 0.08;
+    if (window.innerWidth >= 768) {
+      currentX += (mouseX - currentX) * 0.08;
+      currentY += (mouseY - currentY) * 0.08;
 
-    const centerRotX = 4 - currentY * 8;
-    const centerRotY = currentX * 10;
-    deviceCenter.style.transform = `translate3d(0px, ${currentY * -10}px, 80px) rotateX(${centerRotX}deg) rotateY(${centerRotY}deg)`;
+      const centerRotX = 4 - currentY * 8;
+      const centerRotY = currentX * 10;
+      deviceCenter.style.transform = `translate3d(0px, ${currentY * -10}px, 80px) rotateX(${centerRotX}deg) rotateY(${centerRotY}deg)`;
 
-    const leftRotX = 6 - currentY * 6;
-    const leftRotY = 18 + currentX * 12;
-    deviceLeft.style.transform = `translate3d(-340px, ${20 + currentY * -8}px, -40px) rotateX(${leftRotX}deg) rotateY(${leftRotY}deg)`;
+      const leftRotX = 6 - currentY * 6;
+      const leftRotY = 18 + currentX * 12;
+      deviceLeft.style.transform = `translate3d(-340px, ${20 + currentY * -8}px, -40px) rotateX(${leftRotX}deg) rotateY(${leftRotY}deg)`;
 
-    const rightRotX = 6 - currentY * 6;
-    const rightRotY = -18 + currentX * 12;
-    deviceRight.style.transform = `translate3d(340px, ${20 + currentY * -8}px, -40px) rotateX(${rightRotX}deg) rotateY(${rightRotY}deg)`;
+      const rightRotX = 6 - currentY * 6;
+      const rightRotY = -18 + currentX * 12;
+      deviceRight.style.transform = `translate3d(340px, ${20 + currentY * -8}px, -40px) rotateX(${rightRotX}deg) rotateY(${rightRotY}deg)`;
+    }
 
     requestAnimationFrame(renderParallax);
   }
@@ -148,105 +151,101 @@ const INDUSTRY_DETAILS = {
     points: [
       'Chain of identity (COI) and chain of custody (COC) tracking.',
       'Cold-chain temperature telemetry monitoring down to -196°C.',
-      'Cleanroom environmental monitoring (EM) data aggregation.',
-      'Automated batch release protocol for custom autologous therapies.'
+      'Aseptic manufacturing batch record signoff automation.',
+      'Automated QP release gate keeping for patient-specific lots.'
     ]
   },
   'pharma': {
-    title: 'Pharmaceutical Manufacturing (EU GMP)',
-    subtitle: 'Annex 1, Annex 11 & Annex 16 QP Release Automation',
+    title: 'Pharmaceutical Manufacturing',
+    subtitle: 'EU GMP Annex 1, 11 & 16 Compliance Architecture',
     points: [
-      'Full manufacturing batch lineage and precursor lot genealogy.',
-      'Qualified Person (QP) automated release authorization checklist.',
-      'Integrated Change Control and Deviation Management (QRM).',
-      'EU Falsified Medicines Directive (FMD) serialization sync.'
+      'Cryptographic batch genealogy and lot tracking in seconds.',
+      'Cleanroom environmental monitoring system (EMS) integration.',
+      'Automated deviation risk classification and CAPA engine.',
+      'Qualified Person (QP) electronic batch release portal.'
     ]
   },
   'testing-labs': {
-    title: 'Testing Laboratories (ISO/IEC 17025)',
-    subtitle: 'Accredited LIMS & Direct Instrument Integration',
+    title: 'Testing Laboratories & Contract Analytics',
+    subtitle: 'ISO/IEC 17025 LIMS & Telemetry Engine',
     points: [
-      'Direct RS-232 / REST API instrument data acquisition (HPLC, GC-MS, ICP-MS).',
-      'Out-of-Specification (OOS) automated investigation trigger.',
-      'Tamper-evident Certificate of Analysis (CoA) generation.',
-      'Multi-lab sample routing and audit trail verification.'
+      'Direct HPLC, GC-MS, and ICP-MS instrument data extraction.',
+      'Out-of-Specification (OOS) investigation automation.',
+      'Instant tamper-evident Certificate of Analysis (CoA) issuance.',
+      'Blind sample accessioning and analyst workload dispatch.'
     ]
   },
   'medical-cannabis': {
-    title: 'Medical Cannabis & Botanical Extracts',
-    subtitle: 'EU GMSP & GACP Regulatory Infrastructure',
+    title: 'Regulated Medical Cannabis',
+    subtitle: 'EU GMSP & GACP Seed-to-Patient Traceability',
     points: [
-      'GACP cultivation batch tracking to EU GMP extraction facility.',
-      'Standardized cannabinoid & terpene profile testing verification.',
-      'Heavy metals, pesticides, and residual solvent safety thresholds.',
-      'Cross-border European import/export regulatory documentation.'
+      'Precursor lot tracking and botanical genealogy mapping.',
+      'Potency, pesticide, and heavy metals lab test verification.',
+      'Export compliance documentation for EU member state distribution.',
+      'Automated batch release authorization for GMSP release.'
     ]
   },
   'advanced-manufacturing': {
-    title: 'Advanced Manufacturing & Specialty Chemicals',
-    subtitle: 'ISO 9001 & High-Precision Quality Controls',
+    title: 'High-Precision & Specialty Chemicals',
+    subtitle: 'ISO 9001 & AS9100 Regulatory Quality Control',
     points: [
-      'Statistical Process Control (SPC) real-time quality limits.',
-      'Raw material lot traceability across complex supply chains.',
-      'Non-conformance reporting (NCR) and corrective action workflow.',
-      'Regulatory compliance dashboards for REACH & CLP mandates.'
+      'Non-conformance report (NCR) automated triaging.',
+      'Calibration and equipment maintenance lifecycle tracking.',
+      'Statistical Process Control (SPC) telemetry triggers.',
+      'Global audit-readiness and cryptographic evidence logs.'
     ]
   }
 };
 
 function initModals() {
   const demoModal = document.getElementById('demo-modal');
-  const demoBtns = [
+  const indModal = document.getElementById('industry-modal');
+  const openDemoBtns = [
     document.getElementById('open-demo-btn'),
     document.getElementById('open-demo-btn-hero'),
     document.getElementById('open-demo-btn-final')
   ];
-  const closeModalBtn = document.getElementById('close-modal-btn');
+  const closeDemoBtn = document.getElementById('close-modal-btn');
+  const closeIndModalBtn = document.getElementById('close-ind-modal-btn');
+  const indCards = document.querySelectorAll('.ind-card');
+  const indModalBody = document.getElementById('ind-modal-body');
 
-  demoBtns.forEach((btn) => {
+  openDemoBtns.forEach(btn => {
     if (btn) {
       btn.addEventListener('click', () => {
         demoModal.classList.add('active');
-        demoModal.setAttribute('aria-hidden', 'false');
       });
     }
   });
 
-  if (closeModalBtn) {
-    closeModalBtn.addEventListener('click', () => {
+  if (closeDemoBtn) {
+    closeDemoBtn.addEventListener('click', () => {
       demoModal.classList.remove('active');
-      demoModal.setAttribute('aria-hidden', 'true');
     });
   }
 
   demoModal.addEventListener('click', (e) => {
     if (e.target === demoModal) {
       demoModal.classList.remove('active');
-      demoModal.setAttribute('aria-hidden', 'true');
     }
   });
 
-  const indModal = document.getElementById('industry-modal');
-  const indModalBody = document.getElementById('ind-modal-body');
-  const closeIndModalBtn = document.getElementById('close-ind-modal-btn');
-  const industryTiles = document.querySelectorAll('.ind-card');
-
-  industryTiles.forEach((tile) => {
-    tile.addEventListener('click', () => {
-      const indKey = tile.getAttribute('data-industry');
-      const data = INDUSTRY_DETAILS[indKey];
+  indCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const key = card.dataset.industry;
+      const data = INDUSTRY_DETAILS[key];
 
       if (data && indModalBody) {
         indModalBody.innerHTML = `
-          <span class="meta-tag-brand">INDUSTRY SPECIFICATION</span>
-          <h3 class="modal-title">${data.title}</h3>
-          <p class="modal-sub">${data.subtitle}</p>
-          <div style="margin: 1.5rem 0;">
-            <h4 style="font-family:var(--font-mono); font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted); margin-bottom:1rem;">System Highlights</h4>
-            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.8rem;">
+          <span class="meta-tag-brand">INDUSTRY ARCHITECTURE</span>
+          <h3 style="font-family:var(--font-sans); font-size:1.8rem; font-weight:800; color:var(--text-white); margin-bottom:0.25rem;">${data.title}</h3>
+          <p style="color:var(--mint-accent); font-size:0.95rem; margin-bottom:1.5rem; font-weight:600;">${data.subtitle}</p>
+          <div style="background-color:var(--bg-card); padding:1.25rem; border-radius:8px; border:1px solid var(--border-subtle);">
+            <h5 style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted); text-transform:uppercase; margin-bottom:0.75rem;">Key Regulatory Capabilities</h5>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; font-size:0.9rem; color:var(--text-primary);">
               ${data.points.map(pt => `
-                <li style="display:flex; align-items:flex-start; gap:0.6rem; font-size:0.92rem; color:var(--text-primary);">
-                  <span style="color:var(--teal-primary); font-weight:700;">✓</span>
+                <li style="display:flex; align-items:flex-start; gap:0.5rem;">
+                  <span style="color:var(--mint-accent); font-weight:700;">✓</span>
                   <span>${pt}</span>
                 </li>
               `).join('')}
