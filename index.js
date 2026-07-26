@@ -1,15 +1,80 @@
 /**
- * SIMPLEAFIED SOLUTIONS — OFFICIAL BRANDBOOK INTERACTIVITY
+ * SIMPLEAFIED SOLUTIONS — AUTOMATED DEVICE DETECTION & INTERACTIVITY
  * Motion Physics, Hardware Parallax & Live Micro-interactions
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initDeviceAndViewportDetection();
+  initMobileDrawer();
   initCursorParallax();
   initScrollChoreography();
   initProductMicroInteractions();
   initEcosystemDiagram();
   initModals();
 });
+
+/* 0. AUTOMATED DEVICE & VIEWPORT ENGINE */
+function initDeviceAndViewportDetection() {
+  const html = document.documentElement;
+  
+  function updateViewportMetrics() {
+    // Calculate dynamic viewport height unit (--vh) for mobile Safari/Chrome URL bars
+    const vh = window.innerHeight * 0.01;
+    html.style.setProperty('--vh', `${vh}px`);
+
+    // Automated Device & Screen Capability Recognition
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isIPad = /ipad/.test(userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    const isMobile = width < 768 || /iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(userAgent);
+
+    // Apply state flags
+    html.classList.toggle('is-mobile', isMobile);
+    html.classList.toggle('is-ipad', isIPad);
+    html.classList.toggle('is-desktop', !isMobile && !isIPad);
+    html.classList.toggle('is-touch', isTouch);
+    html.classList.toggle('is-portrait', height > width);
+    html.classList.toggle('is-landscape', width >= height);
+  }
+
+  updateViewportMetrics();
+  window.addEventListener('resize', updateViewportMetrics, { passive: true });
+  window.addEventListener('orientationchange', updateViewportMetrics, { passive: true });
+}
+
+/* MOBILE NAVIGATION DRAWER CONTROLLER */
+function initMobileDrawer() {
+  const toggleBtn = document.getElementById('mobile-nav-toggle');
+  const drawer = document.getElementById('mobile-menu-drawer');
+  const drawerLinks = document.querySelectorAll('.mobile-nav-link');
+  const demoMobileBtn = document.getElementById('open-demo-btn-mobile');
+  const demoModal = document.getElementById('demo-modal');
+
+  if (!toggleBtn || !drawer) return;
+
+  function toggleMenu(open) {
+    const shouldOpen = open !== undefined ? open : !drawer.classList.contains('active');
+    drawer.classList.toggle('active', shouldOpen);
+    toggleBtn.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+    drawer.setAttribute('aria-hidden', shouldOpen ? 'false' : 'true');
+    document.body.style.overflow = shouldOpen ? 'hidden' : '';
+  }
+
+  toggleBtn.addEventListener('click', () => toggleMenu());
+
+  drawerLinks.forEach(link => {
+    link.addEventListener('click', () => toggleMenu(false));
+  });
+
+  if (demoMobileBtn && demoModal) {
+    demoMobileBtn.addEventListener('click', () => {
+      toggleMenu(false);
+      demoModal.classList.add('active');
+    });
+  }
+}
 
 /* 1. 3D HARDWARE PARALLAX & REFLECTION ENGINE */
 function initCursorParallax() {

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
   <!-- Primary Meta Tags -->
   <title>Simpleafied — European Regulatory Technology</title>
@@ -68,8 +68,47 @@
         <button class="btn btn-secondary-brand" id="open-demo-btn">Request Demo</button>
         <a href="#products" class="btn btn-primary-brand">Explore Platform</a>
       </div>
+
+      <!-- Mobile Navigation Hamburger Toggle -->
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
     </div>
   </header>
+
+  <!-- Mobile Slide-Down Menu Drawer Overlay -->
+  <div class="mobile-menu-drawer" id="mobile-menu-drawer" aria-hidden="true">
+    <div class="mobile-drawer-inner">
+      <nav class="mobile-nav-links">
+        <a href="#products" class="mobile-nav-link" id="mlink-products">
+          <span class="m-link-title">Products</span>
+          <span class="m-link-sub">Veritas • Genesis • Nexus</span>
+        </a>
+        <a href="#platform" class="mobile-nav-link" id="mlink-platform">
+          <span class="m-link-title">Platform Architecture</span>
+          <span class="m-link-sub">Unified Compliance Graph</span>
+        </a>
+        <a href="#industries" class="mobile-nav-link" id="mlink-industries">
+          <span class="m-link-title">Regulated Industries</span>
+          <span class="m-link-sub">Life Sciences, Biotech, Pharma</span>
+        </a>
+        <a href="#company" class="mobile-nav-link" id="mlink-company">
+          <span class="m-link-title">Company</span>
+          <span class="m-link-sub">About Simpleafied Solutions</span>
+        </a>
+      </nav>
+      <div class="mobile-drawer-actions">
+        <button class="btn btn-primary-brand btn-large btn-full" id="open-demo-btn-mobile">Schedule Executive Demo &rarr;</button>
+        <div class="mobile-subdomain-quicklinks">
+          <a href="https://veritas.simpleafied.eu" target="_blank" rel="noopener" class="sub-qlink">Veritas ↗</a>
+          <a href="https://genesis.simpleafied.eu" target="_blank" rel="noopener" class="sub-qlink">Genesis ↗</a>
+          <a href="https://nexus.simpleafied.eu" target="_blank" rel="noopener" class="sub-qlink">Nexus ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Hero Experience: Cinematic Hardware Reveal -->
   <section class="hero-keynote" id="hero">
