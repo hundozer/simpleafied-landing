@@ -1,0 +1,40 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='200' height='200'>
+  <!-- Outer Circle Base -->
+  <circle cx='100' cy='100' r='92' fill='#003242'/>
+
+  <!-- White / Negative Space Cutout Tracks & Nodes -->
+  <g stroke='#83D9B5' fill='none' stroke-linecap='round' stroke-linejoin='round'>
+    <!-- Left Angled Track -->
+    <path d='M 74 12 L 44 142' stroke-width='8'/>
+    
+    <!-- Top-Right Main Frame Loop -->
+    <path d='M 74 52 L 130 36 L 134 156' stroke-width='8'/>
+    
+    <!-- Top Stem & Node (Inside upper frame) -->
+    <path d='M 96 46 L 98 62' stroke-width='8'/>
+    
+    <!-- Center Diagonal Stem -->
+    <path d='M 76 130 L 130 102' stroke-width='8'/>
+    
+    <!-- Center Node Stem -->
+    <path d='M 78 102 L 96 82' stroke-width='8'/>
+
+    <!-- Right Node Stem -->
+    <path d='M 132 102 L 162 88' stroke-width='8'/>
+
+    <!-- Bottom Horizontal Cut -->
+    <path d='M 54 168 L 112 170' stroke-width='7'/>
+    <path d='M 106 170 L 140 166' stroke-width='7'/>
+    <path d='M 112 170 L 112 192' stroke-width='6'/>
+  </g>
+
+  <!-- Circular Node Dots (Cutout Circles) -->
+  <g fill='#83D9B5'>
+    <!-- Upper Node -->
+    <circle cx='98' cy='62' r='10'/>
+    <!-- Center Node -->
+    <circle cx='78' cy='102' r='10'/>
+    <!-- Right Node -->
+    <circle cx='162' cy='88' r='10'/>
+  </g>
+</svg>
