@@ -1,6 +1,6 @@
 /**
- * SIMPLEAFIED — PREMIUM INDUSTRIAL TECHNOLOGY INTERACTIVITY
- * Motion Physics & Hardware Parallax
+ * SIMPLEAFIED SOLUTIONS — OFFICIAL BRANDBOOK INTERACTIVITY
+ * Motion Physics, Hardware Parallax & Live Micro-interactions
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -38,7 +38,6 @@ function initCursorParallax() {
     currentX += (mouseX - currentX) * 0.08;
     currentY += (mouseY - currentY) * 0.08;
 
-    // Dynamic 3D tilt calculations
     const centerRotX = 4 - currentY * 8;
     const centerRotY = currentX * 10;
     deviceCenter.style.transform = `translate3d(0px, ${currentY * -10}px, 80px) rotateX(${centerRotX}deg) rotateY(${centerRotY}deg)`;
@@ -65,10 +64,10 @@ function initScrollChoreography() {
     const scrollY = window.scrollY;
 
     if (scrollY > 40) {
-      header.style.backgroundColor = 'rgba(11, 13, 15, 0.95)';
-      header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.6)';
+      header.style.backgroundColor = 'rgba(0, 50, 66, 0.96)';
+      header.style.boxShadow = '0 4px 20px rgba(0, 20, 30, 0.6)';
     } else {
-      header.style.backgroundColor = 'rgba(11, 13, 15, 0.88)';
+      header.style.backgroundColor = 'rgba(0, 50, 66, 0.92)';
       header.style.boxShadow = 'none';
     }
   });
@@ -89,12 +88,12 @@ function initProductMicroInteractions() {
 
       setTimeout(() => {
         signBtn.innerText = 'Signature Authorization Executed ✓';
-        signBtn.style.backgroundColor = '#047857';
+        signBtn.style.backgroundColor = '#11A38E';
         signBtn.style.opacity = '1';
 
         if (sigState) {
           sigState.innerText = 'QP Authorized (Dr. M. Weber &bull; eIDAS Validated)';
-          sigState.style.color = '#10B981';
+          sigState.style.color = '#83D9B5';
         }
 
         const now = new Date();
@@ -103,7 +102,7 @@ function initProductMicroInteractions() {
         newRow.className = 'log-row';
         newRow.innerHTML = `
           <span class="log-time">${timeStr}</span>
-          <span class="log-desc" style="color:#10B981; font-weight:700;">QP Signature Executed: PKI Certified (EU Annex 11)</span>
+          <span class="log-desc" style="color:#83D9B5; font-weight:700;">QP Signature Executed: PKI Certified (EU Annex 11)</span>
         `;
         auditLog.prepend(newRow);
 
@@ -122,11 +121,11 @@ function initEcosystemDiagram() {
 
   nodes.forEach((node) => {
     node.addEventListener('mouseenter', () => {
-      lines.forEach(l => l.style.stroke = '#059669');
+      lines.forEach(l => l.style.stroke = '#11A38E');
     });
 
     node.addEventListener('mouseleave', () => {
-      lines.forEach(l => l.style.stroke = '#E2E8F0');
+      lines.forEach(l => l.style.stroke = '#A3C2CA');
     });
   });
 }
@@ -227,7 +226,6 @@ function initModals() {
     }
   });
 
-  // Industry Modal Handler
   const indModal = document.getElementById('industry-modal');
   const indModalBody = document.getElementById('ind-modal-body');
   const closeIndModalBtn = document.getElementById('close-ind-modal-btn');
@@ -240,7 +238,7 @@ function initModals() {
 
       if (data && indModalBody) {
         indModalBody.innerHTML = `
-          <div class="meta-tag-tech">INDUSTRY SPECIFICATION</div>
+          <span class="meta-tag-brand">INDUSTRY SPECIFICATION</span>
           <h3 class="modal-title">${data.title}</h3>
           <p class="modal-sub">${data.subtitle}</p>
           <div style="margin: 1.5rem 0;">
@@ -248,14 +246,14 @@ function initModals() {
             <ul style="list-style:none; display:flex; flex-direction:column; gap:0.8rem;">
               ${data.points.map(pt => `
                 <li style="display:flex; align-items:flex-start; gap:0.6rem; font-size:0.92rem; color:var(--text-primary);">
-                  <span style="color:var(--emerald-accent); font-weight:700;">✓</span>
+                  <span style="color:var(--teal-primary); font-weight:700;">✓</span>
                   <span>${pt}</span>
                 </li>
               `).join('')}
             </ul>
           </div>
           <div style="margin-top:2rem; display:flex; gap:1rem;">
-            <button class="btn btn-primary-tech" onclick="document.getElementById('industry-modal').classList.remove('active'); document.getElementById('demo-modal').classList.add('active');">Schedule Industry Demo &rarr;</button>
+            <button class="btn btn-primary-brand" onclick="document.getElementById('industry-modal').classList.remove('active'); document.getElementById('demo-modal').classList.add('active');">Schedule Industry Demo &rarr;</button>
           </div>
         `;
         indModal.classList.add('active');
