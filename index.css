@@ -396,7 +396,8 @@ button {
 
 .hero-content {
   text-align: center;
-  max-width: 1200px;
+  max-width: 1240px;
+  width: 100%;
   padding: 0 1.5rem;
   margin-bottom: 2rem;
 }
@@ -451,37 +452,21 @@ button {
   gap: 1.25rem;
 }
 
-/* Explicit Product Portfolio Header */
+/* Spacious, Clean Product Suite Label Header */
 .hero-products-header {
-  margin-top: 4.5rem;
-  margin-bottom: 1.75rem;
+  margin-top: 5.5rem;
+  margin-bottom: 2rem;
   text-align: center;
-}
-
-.hero-products-headline {
-  font-family: var(--font-sans);
-  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--text-white);
-  margin-bottom: 0.5rem;
-}
-
-.hero-products-subhead {
-  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
-  color: var(--text-muted);
-  max-width: 680px;
-  margin: 0 auto;
 }
 
 /* Executive Product Family Showcase Cards Grid in Hero */
 .hero-product-cards-grid {
-  max-width: 1180px;
+  max-width: 1200px;
   width: 100%;
-  margin: 2rem auto 1rem auto;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1.75rem;
   padding: 0 0.5rem;
   position: relative;
   z-index: 20;
@@ -532,34 +517,18 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.75rem;
-}
-
-.hcard-product-tag {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-}
-
-.hcard-badge-num {
-  font-family: var(--font-mono);
-  font-size: 0.6rem;
-  font-weight: 700;
-  color: var(--mint-accent);
-  letter-spacing: 0.1em;
-  background-color: rgba(131, 217, 181, 0.12);
-  padding: 0.2rem 0.45rem;
-  border-radius: 3px;
-  border: 1px solid rgba(131, 217, 181, 0.25);
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
 }
 
 .hcard-pill {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
-  padding: 0.25rem 0.6rem;
+  letter-spacing: 0.1em;
+  padding: 0.28rem 0.65rem;
   border-radius: 4px;
+  white-space: nowrap;
 }
 
 .pill-v { background-color: var(--teal-primary); color: #FEFEFE; }
@@ -568,13 +537,14 @@ button {
 
 .hcard-status {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.68rem;
   color: var(--text-muted);
+  white-space: nowrap;
 }
 
 .hcard-title {
   font-family: var(--font-sans);
-  font-size: 1.22rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--text-white);
   margin-bottom: 0.4rem;
@@ -582,9 +552,9 @@ button {
 }
 
 .hcard-desc {
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   color: var(--text-muted);
-  line-height: 1.45;
+  line-height: 1.48;
   margin-bottom: 1.25rem;
 }
 
