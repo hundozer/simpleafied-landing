@@ -3,1189 +3,807 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Simpleafied is the compliance intelligence layer connecting cannabis & hemp businesses to accredited laboratories globally. Know what to test. Find where to test. Know if you passed.">
-  <title>Simpleafied — Compliance Infrastructure for Cannabis & Hemp</title>
+  <meta name="description" content="Simpleafied Solutions — Intelligent compliance infrastructure for Europe's highly regulated industries (Veritas EQMS, Genesis Operational Traceability, Nexus LIMS).">
+  <title>Simpleafied Solutions — Compliance Infrastructure for Europe's Regulated Industries</title>
   
-  <!-- Fonts -->
+  <!-- Editorial & System Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   
-  <!-- Styling -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-  <!-- Background Grid & Glowing Accents -->
-  <div class="background-grid"></div>
-  <div class="glow-orb"></div>
-
-  <!-- Header Navigation -->
-  <header class="site-header">
-    <div class="container header-container">
-      <a href="#" class="logo-link">
-        <svg class="logo-svg" viewBox="0 0 100 100" width="32" height="32" style="flex-shrink: 0;">
-          <defs>
-            <linearGradient id="logo-grad" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#10B981" />
-              <stop offset="100%" stop-color="#C6F24E" />
-            </linearGradient>
-            <mask id="logo-mask">
-              <circle cx="50" cy="50" r="45" fill="white" />
-              <line x1="35" y1="0" x2="15" y2="90" stroke="black" stroke-width="6.5" stroke-linecap="round" />
-              <line x1="0" y1="35" x2="75" y2="22" stroke="black" stroke-width="6.5" stroke-linecap="round" />
-              <line x1="15" y1="70" x2="85" y2="42" stroke="black" stroke-width="6.5" stroke-linecap="round" />
-              <line x1="52" y1="10" x2="48" y2="90" stroke="black" stroke-width="6.5" stroke-linecap="round" />
-              <line x1="10" y1="78" x2="90" y2="78" stroke="black" stroke-width="6.5" stroke-linecap="round" />
-            </mask>
-          </defs>
-          <circle cx="50" cy="50" r="45" fill="url(#logo-grad)" mask="url(#logo-mask)" />
-          <circle cx="62" cy="30" r="4.5" fill="white" />
-          <line x1="49" y1="32" x2="62" y2="30" stroke="white" stroke-width="3.5" stroke-linecap="round" />
-          <circle cx="36" cy="48" r="4.5" fill="white" />
-          <line x1="44" y1="62" x2="36" y2="48" stroke="white" stroke-width="3.5" stroke-linecap="round" />
-          <circle cx="82" cy="46" r="4.5" fill="white" />
-          <line x1="68" y1="52" x2="82" y2="46" stroke="white" stroke-width="3.5" stroke-linecap="round" />
+  <!-- Global Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#" class="brand-logo" aria-label="Simpleafied Solutions Home">
+        <svg class="brand-mark" viewBox="0 0 40 40" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" stroke="#111315" stroke-width="2.5"/>
+          <path d="M14 20C14 16.6863 16.6863 14 20 14C23.3137 14 26 16.6863 26 20C26 23.3137 23.3137 26 20 26" stroke="#0A192F" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="20" cy="20" r="3" fill="#059669"/>
         </svg>
-        <span class="logo-text">simp<span class="text-accent-logo">leaf</span>ied<span class="text-accent-logo">.</span></span>
+        <span class="brand-name">Simpleafied<span class="brand-tag">Solutions</span></span>
       </a>
-      <nav class="main-nav">
-        <a href="#sandbox-section" class="nav-item">Interactive Demo</a>
-        <a href="#motifs-section" class="nav-item">Features</a>
-        <a href="#dashboard-section" class="nav-item">Dashboard</a>
-        <a href="#architecture-section" class="nav-item">Architecture</a>
-        <a href="#roadmap-section" class="nav-item">Roadmap</a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#chapters" class="nav-link">Exhibition</a>
+        <a href="#platform" class="nav-link">Platform</a>
+        <a href="#industries" class="nav-link">Industries</a>
+        <a href="#company" class="nav-link">Company</a>
       </nav>
-      <div class="header-cta">
-        <a href="#sandbox-section" class="btn btn-secondary">Try Sandbox</a>
-        <a href="mailto:contact@simpleafied.app" class="btn btn-primary">Launch App →</a>
+
+      <div class="header-actions">
+        <button class="btn btn-tertiary" id="open-demo-btn">Request Demo</button>
+        <a href="#products" class="btn btn-primary-keynote">Explore Platform</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="container hero-container">
-      <div class="badge">Compliance Infrastructure &middot; Cannabis & Hemp</div>
-      <h1 class="hero-title text-balance">
-        Know what to test.<br>
-        Find where to test.<br>
-        <span class="text-accent">Know if you passed.</span>
+  <!-- Keynote Hero Section -->
+  <section class="hero-keynote" id="hero">
+    <div class="hero-content">
+      <div class="meta-tag">European Regulatory Technology</div>
+      <h1 class="hero-headline">
+        Compliance Infrastructure for Europe's Regulated Industries.
       </h1>
-      <p class="hero-subtitle">
-        The compliance intelligence layer connecting cannabis & hemp businesses to accredited laboratories — globally.
+      <p class="hero-subhead">
+        Simpleafied develops intelligent regulatory technology that helps organizations build quality, laboratory and operational compliance into every process.
       </p>
-      <div class="hero-actions">
-        <a href="#sandbox-section" class="btn btn-accent btn-large">Try the Interactive Sandbox &darr;</a>
-        <a href="mailto:contact@simpleafied.app" class="btn btn-secondary btn-large">Contact Sales</a>
+      <div class="hero-cta-group">
+        <a href="#products" class="btn btn-primary-keynote btn-large">Explore the Platform</a>
+        <button class="btn btn-secondary-keynote btn-large" id="open-demo-btn-hero">Request a Demonstration</button>
       </div>
-      
-      <!-- Tiny stats strip -->
-      <div class="hero-stats-strip">
-        <span>INVESTOR &amp; PRODUCT PRESENTATION</span>
-        <span class="divider">/</span>
-        <span>SERIES A &middot; 2026</span>
-        <span class="divider">/</span>
-        <span>SIMPLEAFIED.COM</span>
+    </div>
+
+    <!-- 3D Floating iPad Pro Exhibition Stage -->
+    <div class="exhibition-stage-container" id="exhibition-stage">
+      <div class="stage-3d" id="stage-3d">
+
+        <!-- LEFT DEVICE: Genesis (Operational Traceability) -->
+        <div class="ipad-device ipad-left" id="ipad-genesis">
+          <div class="ipad-hardware">
+            <div class="ipad-camera"></div>
+            <div class="ipad-screen">
+              <div class="app-interface genesis-interface">
+                <div class="app-header">
+                  <div class="app-brand">
+                    <span class="app-pill pill-genesis">GENESIS</span>
+                    <span class="app-title">Operational Traceability</span>
+                  </div>
+                  <div class="app-badge">Batch #PH-8842-A</div>
+                </div>
+
+                <div class="app-body">
+                  <div class="interface-panel panel-left">
+                    <div class="panel-label">Genealogy Lineage</div>
+                    <div class="trace-tree">
+                      <div class="tree-node node-active">
+                        <span class="node-dot"></span>
+                        <div class="node-info">
+                          <span class="node-title">Raw Active Substance</span>
+                          <span class="node-meta">Lot #RM-90412 &bull; 99.8% Pure</span>
+                        </div>
+                      </div>
+                      <div class="tree-connector"></div>
+                      <div class="tree-node node-active">
+                        <span class="node-dot"></span>
+                        <div class="node-info">
+                          <span class="node-title">Formulation &amp; Emulsification</span>
+                          <span class="node-meta">Cleanroom A2 &bull; Temp 18.4°C</span>
+                        </div>
+                      </div>
+                      <div class="tree-connector"></div>
+                      <div class="tree-node node-highlight">
+                        <span class="node-dot dot-emerald"></span>
+                        <div class="node-info">
+                          <span class="node-title">Aseptic Fill &amp; Inspection</span>
+                          <span class="node-meta">Validated &bull; 14,200 Units</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="interface-panel panel-right">
+                    <div class="panel-label">Telemetry &amp; Audit Trail</div>
+                    <div class="metric-row">
+                      <span class="m-label">Chain of Custody</span>
+                      <span class="m-val val-pass">Verified (Cryptographic Hash)</span>
+                    </div>
+                    <div class="metric-row">
+                      <span class="m-label">EU GMP Status</span>
+                      <span class="m-val">Compliant (Annex 11)</span>
+                    </div>
+                    <div class="metric-row">
+                      <span class="m-label">Serial Allocation</span>
+                      <span class="m-val">EU-GS1-98402-2026</span>
+                    </div>
+                    <div class="status-box">
+                      <div class="status-indicator"></div>
+                      <span>Live Batch Genealogy Monitored</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="device-reflection"></div>
+        </div>
+
+        <!-- CENTER DEVICE: Veritas (Flagship Enterprise Quality Management) -->
+        <div class="ipad-device ipad-center" id="ipad-veritas">
+          <div class="ipad-hardware">
+            <div class="ipad-camera"></div>
+            <div class="ipad-screen">
+              <div class="app-interface veritas-interface">
+                <div class="app-header">
+                  <div class="app-brand">
+                    <span class="app-pill pill-veritas">VERITAS</span>
+                    <span class="app-title">Enterprise Quality Management</span>
+                  </div>
+                  <div class="app-badge badge-hero">21 CFR Part 11 Compliant</div>
+                </div>
+
+                <div class="app-body">
+                  <div class="veritas-grid">
+                    <div class="v-card audit-score-card">
+                      <div class="v-card-header">Audit Readiness Index</div>
+                      <div class="score-display">
+                        <span class="score-number" id="audit-score-num">98.4</span>
+                        <span class="score-percent">%</span>
+                      </div>
+                      <div class="score-bar">
+                        <div class="score-fill" style="width: 98.4%;"></div>
+                      </div>
+                      <div class="score-foot">1,482 Active Compliance Controls Verified</div>
+                    </div>
+
+                    <div class="v-card workflow-card">
+                      <div class="v-card-header">Document Approval Workflow &bull; SOP-QA-2026-089</div>
+                      <div class="workflow-steps">
+                        <div class="step step-done">
+                          <span class="step-icon">&check;</span>
+                          <div class="step-text">
+                            <span class="st-name">Quality Assurance Review</span>
+                            <span class="st-meta">Approved by Dr. M. Weber &bull; 09:14 CEST</span>
+                          </div>
+                        </div>
+                        <div class="step step-done">
+                          <span class="step-icon">&check;</span>
+                          <div class="step-text">
+                            <span class="st-name">Regulatory Affairs Sign-Off</span>
+                            <span class="st-meta">Approved by H. Vance &bull; 10:42 CEST</span>
+                          </div>
+                        </div>
+                        <div class="step step-current">
+                          <span class="step-icon step-pulse"></span>
+                          <div class="step-text">
+                            <span class="st-name">Qualified Person (QP) Final Authorization</span>
+                            <span class="st-meta">Awaiting Electronic Signature &bull; PKI Verified</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="v-card capa-card">
+                      <div class="v-card-header">Change Control &amp; CAPA Overview</div>
+                      <div class="capa-metrics">
+                        <div class="c-stat">
+                          <span class="c-num">0</span>
+                          <span class="c-lbl">Open Critical Deviations</span>
+                        </div>
+                        <div class="c-stat">
+                          <span class="c-num">12</span>
+                          <span class="c-lbl">Closed CAPAs (Q3)</span>
+                        </div>
+                        <div class="c-stat">
+                          <span class="c-num">&lt; 24h</span>
+                          <span class="c-lbl">Avg Resolution Time</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="device-reflection"></div>
+        </div>
+
+        <!-- RIGHT DEVICE: Nexus (Laboratory Information Management) -->
+        <div class="ipad-device ipad-right" id="ipad-nexus">
+          <div class="ipad-hardware">
+            <div class="ipad-camera"></div>
+            <div class="ipad-screen">
+              <div class="app-interface nexus-interface">
+                <div class="app-header">
+                  <div class="app-brand">
+                    <span class="app-pill pill-nexus">NEXUS</span>
+                    <span class="app-title">Laboratory Information Management</span>
+                  </div>
+                  <div class="app-badge">ISO/IEC 17025 Accredited</div>
+                </div>
+
+                <div class="app-body">
+                  <div class="nexus-layout">
+                    <div class="nexus-sidebar">
+                      <div class="n-title">Sample Queue</div>
+                      <div class="sample-item item-selected">
+                        <div class="s-code">QC-90412-A</div>
+                        <div class="s-desc">High-Purity API Assay</div>
+                        <span class="s-tag tag-pass">CoA Generated</span>
+                      </div>
+                      <div class="sample-item">
+                        <div class="s-code">QC-90412-B</div>
+                        <div class="s-desc">Heavy Metals Screening</div>
+                        <span class="s-tag tag-testing">In Testing (HPLC)</span>
+                      </div>
+                      <div class="sample-item">
+                        <div class="s-code">QC-90413-A</div>
+                        <div class="s-desc">Microbial Bioburden</div>
+                        <span class="s-tag tag-pending">Incubation (24h)</span>
+                      </div>
+                    </div>
+
+                    <div class="nexus-main">
+                      <div class="n-panel">
+                        <div class="n-panel-title">Certificate of Analysis #CoA-2026-8891</div>
+                        <div class="assay-table">
+                          <div class="table-row t-head">
+                            <span>Parameter</span>
+                            <span>Specification</span>
+                            <span>Result</span>
+                            <span>Status</span>
+                          </div>
+                          <div class="table-row">
+                            <span>Potency Assay</span>
+                            <span>99.0% &ndash; 101.0%</span>
+                            <span class="num-bold">99.85%</span>
+                            <span class="badge-pass">PASS</span>
+                          </div>
+                          <div class="table-row">
+                            <span>Residual Solvents</span>
+                            <span>&lt; 50 ppm</span>
+                            <span class="num-bold">1.2 ppm</span>
+                            <span class="badge-pass">PASS</span>
+                          </div>
+                          <div class="table-row">
+                            <span>Endotoxin Assay</span>
+                            <span>&lt; 0.25 EU/mL</span>
+                            <span class="num-bold">&lt; 0.05 EU/mL</span>
+                            <span class="badge-pass">PASS</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="utilization-bar">
+                        <span>Equipment Utilization: HPLC Spectrometer #04 &bull; Calibrated</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="device-reflection"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Product Labels Navigation Strip -->
+    <div class="product-labels-container" id="products">
+      <div class="product-label-card" data-target="veritas">
+        <span class="p-code">VERITAS</span>
+        <h3 class="p-title">Enterprise Quality Management</h3>
+        <span class="p-arrow">&darr;</span>
+        <a href="#chapter-veritas" class="p-link">Explore &rarr;</a>
+      </div>
+
+      <div class="product-label-card" data-target="genesis">
+        <span class="p-code">GENESIS</span>
+        <h3 class="p-title">Operational Traceability</h3>
+        <span class="p-arrow">&darr;</span>
+        <a href="#chapter-genesis" class="p-link">Explore &rarr;</a>
+      </div>
+
+      <div class="product-label-card" data-target="nexus">
+        <span class="p-code">NEXUS</span>
+        <h3 class="p-title">Laboratory Information Management</h3>
+        <span class="p-arrow">&darr;</span>
+        <a href="#chapter-nexus" class="p-link">Explore &rarr;</a>
       </div>
     </div>
   </section>
 
-  <!-- Problem Section -->
-  <section class="problem-section container">
-    <div class="section-label">01 — The Problem</div>
-    <div class="section-header-row">
-      <h2 class="section-title text-balance">Cannabis testing is <span class="text-fail">fragmented, manual, and opaque.</span></h2>
-      <p class="section-description">
-        Businesses navigate shifting regulations alone. Labs drown in repetitive admin. No one owns the workflow end-to-end.
-      </p>
-    </div>
+  <!-- Editorial Product Chapters Section -->
+  <section class="editorial-chapters" id="chapters">
     
-    <div class="problem-grid">
-      <div class="problem-card">
-        <h3 class="problem-card-title">For Businesses</h3>
-        <ul class="problem-list">
-          <li>
-            <svg class="icon icon-cross" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-            Decode regulations across each export market
-          </li>
-          <li>
-            <svg class="icon icon-cross" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-            Guess which test panels are required
-          </li>
-          <li>
-            <svg class="icon icon-cross" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-            Hunt for accredited labs by email &amp; phone
-          </li>
-          <li>
-            <svg class="icon icon-cross" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-            Compare quotes in spreadsheets
-          </li>
-          <li>
-            <svg class="icon icon-cross" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-            Ship samples without tracking
-          </li>
-          <li>
-            <svg class="icon icon-cross" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-            Interpret raw CoA numbers themselves
-          </li>
-        </ul>
-      </div>
-      
-      <div class="problem-card highlight-card">
-        <h3 class="problem-card-title">For Laboratories</h3>
-        <div class="stat-block">
-          <div class="stat-number">40%</div>
-          <div class="stat-label text-balance">of lab time spent on quoting, onboarding, and answering emails</div>
-        </div>
-        <div class="stat-block">
-          <div class="stat-number">0</div>
-          <div class="stat-label text-balance">unified platforms exist today across the global cannabis market</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Sandbox Section -->
-  <section id="sandbox-section" class="sandbox-section">
-    <div class="container">
-      <div class="section-label">02 — THE SOLUTION &middot; LIVE PLAYGROUND</div>
-      <h2 class="section-title text-balance">One platform. Six stakeholders. <span class="text-accent">Zero guesswork.</span></h2>
-      <p class="section-description centered">
-        Experience the Simpleafied workflow end-to-end. Configure a product, run the Compliance Engine, choose a laboratory, and verify the Certificate of Analysis.
+    <!-- Chapter 1: Veritas -->
+    <article class="chapter-block" id="chapter-veritas">
+      <div class="chapter-meta">CHAPTER 01 &bull; VERITAS</div>
+      <blockquote class="chapter-quote">
+        &ldquo;Every approval becomes evidence.&rdquo;
+      </blockquote>
+      <p class="chapter-desc">
+        Simpleafied Veritas turns compliance from an annual audit burden into a continuous, real-time operating state. Purpose-built for European GxP and ISO regulated organizations.
       </p>
 
-      <!-- Sandbox Widget Wrapper -->
-      <div class="sandbox-widget">
-        <!-- Steps Header / Navigation -->
-        <div class="sandbox-steps-nav">
-          <div class="sandbox-step-indicator active" data-step="1">
-            <span class="step-num">1</span>
-            <span class="step-name">Market &amp; Product</span>
+      <div class="chapter-stage">
+        <div class="chapter-ui-frame">
+          <div class="c-ui-header">
+            <div class="c-ui-dots"><span></span><span></span><span></span></div>
+            <div class="c-ui-title">Simpleafied Veritas &mdash; Automated Electronic Signature &amp; Audit Trail</div>
+            <div class="c-ui-status">21 CFR Part 11 Validated</div>
           </div>
-          <div class="sandbox-step-indicator" data-step="2">
-            <span class="step-num">2</span>
-            <span class="step-name">Compliance Engine</span>
-          </div>
-          <div class="sandbox-step-indicator" data-step="3">
-            <span class="step-num">3</span>
-            <span class="step-name">Accredited Labs</span>
-          </div>
-          <div class="sandbox-step-indicator" data-step="4">
-            <span class="step-num">4</span>
-            <span class="step-name">Package &amp; Order</span>
-          </div>
-          <div class="sandbox-step-indicator" data-step="5">
-            <span class="step-num">5</span>
-            <span class="step-name">Track &amp; Verify</span>
-          </div>
-        </div>
-
-        <!-- Step Content Area -->
-        <div class="sandbox-content-container">
-          
-          <!-- Step 1: Target Market & Product Type Selection -->
-          <div class="sandbox-step-panel active" id="step-panel-1">
-            <div class="panel-header">
-              <h3>Tell us where you're selling. Tell us what you're making.</h3>
-              <p>Two inputs. That's all the engine needs to start work.</p>
-            </div>
-            
-            <div class="selection-columns">
-              <!-- Left Column: Target Market -->
-              <div class="selection-box">
-                <div class="box-num">1</div>
-                <div class="box-label">TARGET MARKET</div>
-                <h4>Where will the product be sold?</h4>
-                <p class="helper-text">Select a destination country to fetch the correct regulatory limits.</p>
-                
-                <div class="market-options">
-                  <button class="market-btn active" data-market="DE">
-                    <span class="flag">🇩🇪</span> Germany <span class="checkmark-dot">✓</span>
-                  </button>
-                  <button class="market-btn" data-market="CZ">
-                    <span class="flag">🇨🇿</span> Czech Republic <span class="checkmark-dot">✓</span>
-                  </button>
-                  <button class="market-btn" data-market="GB">
-                    <span class="flag">🇬🇧</span> United Kingdom <span class="checkmark-dot">✓</span>
-                  </button>
-                  <button class="market-btn" data-market="AU">
-                    <span class="flag">🇦🇺</span> Australia <span class="checkmark-dot">✓</span>
-                  </button>
-                  <button class="market-btn" data-market="CH">
-                    <span class="flag">🇨🇭</span> Switzerland <span class="checkmark-dot">✓</span>
-                  </button>
+          <div class="c-ui-body veritas-chapter-body">
+            <div class="c-col col-main">
+              <div class="doc-header-box">
+                <span class="doc-type">STANDARD OPERATING PROCEDURE</span>
+                <h4 class="doc-name">SOP-QA-4092: Automated Release Authorization Protocol</h4>
+                <div class="doc-meta-strip">
+                  <span>Version 4.2</span>
+                  <span>Effective Date: 2026-07-01</span>
+                  <span>Owner: Dr. M. Weber, VP Quality</span>
                 </div>
               </div>
 
-              <!-- Right Column: Product Type -->
-              <div class="selection-box">
-                <div class="box-num">2</div>
-                <div class="box-label">PRODUCT TYPE</div>
-                <h4>What are you testing?</h4>
-                <p class="helper-text">Product category narrows the analyte requirements (e.g. heavy metals limits, pesticides).</p>
-                
-                <div class="product-type-grid">
-                  <div class="product-cat-block">
-                    <h5>Plant Material</h5>
-                    <button class="product-btn active" data-product="Flower">❀ Flower</button>
-                    <button class="product-btn" data-product="CBD Flower">✿ CBD Flower</button>
-                  </div>
-                  <div class="product-cat-block">
-                    <h5>Extracts / Oils</h5>
-                    <button class="product-btn" data-product="Extract">◆ Extract</button>
-                    <button class="product-btn" data-product="Oil">◯ Oil</button>
-                  </div>
-                  <div class="product-cat-block">
-                    <h5>Finished Products</h5>
-                    <button class="product-btn" data-product="Edible">▢ Edible</button>
-                    <button class="product-btn" data-product="Cosmetic">✦ Cosmetic</button>
-                  </div>
+              <div class="doc-content-preview">
+                <p>This protocol specifies the automated checks required prior to final Qualified Person (QP) release. All electronic signatures executed within Simpleafied Veritas bind the signer with legal equivalence under EU Regulation No 910/2014 (eIDAS) and 21 CFR Part 11.</p>
+              </div>
+
+              <div class="interactive-sign-box">
+                <div class="sign-left">
+                  <span class="sign-label">SIGNATURE AUTHORIZATION</span>
+                  <span class="sign-status-text">Pending QP Electronic Authorization</span>
                 </div>
+                <button class="btn btn-emerald-action" id="simulate-sign-btn">Execute Electronic Signature</button>
               </div>
             </div>
 
-            <div class="panel-actions">
-              <div></div>
-              <button class="btn btn-primary" onclick="goToStep(2)">Configure Panel &rarr;</button>
+            <div class="c-col col-side">
+              <div class="side-box">
+                <span class="sb-label">Audit Trail Ledger</span>
+                <div class="audit-log" id="audit-log-list">
+                  <div class="log-entry">
+                    <span class="log-time">13:12:04</span>
+                    <span class="log-txt">PKI Certificate validated for User #8941</span>
+                  </div>
+                  <div class="log-entry">
+                    <span class="log-time">13:08:19</span>
+                    <span class="log-txt">CAPA-2026-104 linked to SOP-QA-4092</span>
+                  </div>
+                  <div class="log-entry">
+                    <span class="log-time">12:45:00</span>
+                    <span class="log-txt">Automated integrity check: Hash 0x9f8...a42</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-          <!-- Step 2: Compliance Recommendation Engine -->
-          <div class="sandbox-step-panel" id="step-panel-2">
-            <div class="panel-header">
-              <h3>Regulations in. Testing prescription out.</h3>
-              <p>The engine reads market + product type and returns a precise three-tier test panel.</p>
-            </div>
-
-            <!-- Engine visual feedback bar -->
-            <div class="engine-feedback-bar">
-              <svg class="icon icon-target anim-spin" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-              <span>COMPLIANCE ENGINE v2.4.1 &middot; <strong id="engine-config-text">Germany &times; Flower</strong></span>
-              <span class="engine-rules-applied" id="engine-rules-text">Rules: BfArM-2025-r3 &middot; EU-Pesticide-MRL-2024</span>
-            </div>
-
-            <div class="compliance-tiers-grid">
-              <!-- Required tier -->
-              <div class="tier-card required-tier">
-                <div class="tier-badge badge-fail">REQUIRED &bull; LOCKED</div>
-                <h4>Mandatory by law</h4>
-                <div class="analyte-list" id="required-analyte-list">
-                  <!-- JS populated -->
-                </div>
-              </div>
-
-              <!-- Recommended tier -->
-              <div class="tier-card recommended-tier">
-                <div class="tier-badge badge-warn">RECOMMENDED &bull; EDITABLE</div>
-                <h4>Best practice</h4>
-                <div class="analyte-list" id="recommended-analyte-list">
-                  <!-- JS populated -->
-                </div>
-              </div>
-
-              <!-- Optional tier -->
-              <div class="tier-card optional-tier">
-                <div class="tier-badge badge-info">OPTIONAL &bull; OPT-IN</div>
-                <h4>Add-on analyses</h4>
-                <div class="analyte-list" id="optional-analyte-list">
-                  <!-- JS populated -->
-                </div>
-              </div>
-            </div>
-
-            <div class="panel-summary-bar">
-              <span id="selected-analytes-count">8 analytes selected &middot; estimated total €212 + lab pricing</span>
-            </div>
-
-            <div class="panel-actions">
-              <button class="btn btn-secondary" onclick="goToStep(1)">&larr; Back</button>
-              <button class="btn btn-primary" onclick="goToStep(3)">Find Laboratories &rarr;</button>
-            </div>
-          </div>
-
-          <!-- Step 3: Laboratory Marketplace -->
-          <div class="sandbox-step-panel" id="step-panel-3">
-            <div class="panel-header">
-              <h3>Booking.com — for accredited labs.</h3>
-              <p>Compare accreditation, panels, turnaround, price, and location in a single ranked view.</p>
-            </div>
-
-            <div class="marketplace-layout">
-              <!-- Left sidebar: filters -->
-              <div class="filters-sidebar">
-                <h4 class="sidebar-title">Filters</h4>
-                <div class="filter-group">
-                  <h5>Accreditation</h5>
-                  <label class="checkbox-label"><input type="checkbox" checked disabled> ISO 17025</label>
-                  <label class="checkbox-label"><input type="checkbox" checked id="filter-gmp"> EU-GMP</label>
-                  <label class="checkbox-label"><input type="checkbox" id="filter-dakks"> DAkkS</label>
-                </div>
-                <div class="filter-group">
-                  <h5>Turnaround</h5>
-                  <input type="range" min="2" max="10" value="5" class="slider" id="tat-slider">
-                  <div class="slider-labels">
-                    <span>2 days</span>
-                    <span>10 days</span>
-                  </div>
-                </div>
-                <div class="filter-group">
-                  <h5>Location</h5>
-                  <select id="location-select">
-                    <option value="EU-UK">EU + UK</option>
-                    <option value="Germany-only">Germany Only</option>
-                  </select>
-                </div>
-              </div>
-
-              <!-- Right list: laboratory cards -->
-              <div class="labs-list" id="labs-list-container">
-                <!-- JS populated -->
-              </div>
-            </div>
-
-            <div class="panel-actions">
-              <button class="btn btn-secondary" onclick="goToStep(2)">&larr; Back</button>
-              <button class="btn btn-primary" id="lab-select-next-btn" onclick="goToStep(4)" disabled>Choose Package &rarr;</button>
-            </div>
-          </div>
-
-          <!-- Step 4: Test Package Selection & Metadata Form -->
-          <div class="sandbox-step-panel" id="step-panel-4">
-            <div class="panel-header">
-              <h3>Pick a package. Enter sample details.</h3>
-              <p>Choose your pricing tier and capture the chain-of-custody metadata.</p>
-            </div>
-
-            <div class="package-checkout-grid">
-              <!-- Left Column: Package Options & Form -->
-              <div class="details-left">
-                <h4>1. Choose pricing tier</h4>
-                <div class="packages-grid">
-                  <div class="package-card" id="pkg-compliance" onclick="selectPackage('compliance')">
-                    <div class="pkg-header">
-                      <h5>Compliance</h5>
-                      <span class="price-val" id="pkg-price-compliance">€280</span>
-                    </div>
-                    <p class="pkg-desc">The mandatory set required for legal sale.</p>
-                    <span class="pkg-tat">3-5 day turnaround</span>
-                  </div>
-                  <div class="package-card active" id="pkg-characterization" onclick="selectPackage('characterization')">
-                    <div class="pkg-badge">Most chosen</div>
-                    <div class="pkg-header">
-                      <h5>Full Characterization</h5>
-                      <span class="price-val" id="pkg-price-full">€448</span>
-                    </div>
-                    <p class="pkg-desc">Compliance + full terpene &amp; quality indicators.</p>
-                    <span class="pkg-tat">3-5 day turnaround</span>
-                  </div>
-                  <div class="package-card" id="pkg-custom" onclick="selectPackage('custom')">
-                    <div class="pkg-header">
-                      <h5>Custom</h5>
-                      <span class="price-val" id="pkg-price-custom">€384</span>
-                    </div>
-                    <p class="pkg-desc">Keep the precise analyte configuration defined in Step 2.</p>
-                    <span class="pkg-tat">3-5 day turnaround</span>
-                  </div>
-                </div>
-
-                <h4 class="form-title-margin">2. Sample details &amp; metadata</h4>
-                <div class="sample-details-form">
-                  <div class="form-row">
-                    <div class="form-field">
-                      <label for="sample-name">Sample name</label>
-                      <input type="text" id="sample-name" value="Bavarian Haze &bull; Indoor 2025-W30">
-                    </div>
-                    <div class="form-field">
-                      <label for="batch-num">Batch number</label>
-                      <input type="text" id="batch-num" value="BH-25W30-IDR-04">
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="form-field">
-                      <label for="sample-qty">Quantity submitted (grams)</label>
-                      <input type="number" id="sample-qty" value="10">
-                    </div>
-                    <div class="form-field">
-                      <label for="harvest-date">Harvest date</label>
-                      <input type="date" id="harvest-date" value="2026-07-12">
-                    </div>
-                  </div>
-                  <div class="form-field">
-                    <label>Simulate Path</label>
-                    <p class="helper-text" style="margin-top:-4px; margin-bottom: 8px;">Choose whether you want the sample to pass or trigger a Cadmium heavy-metal failure on the final CoA.</p>
-                    <div class="path-toggle-group">
-                      <button class="path-btn active" data-path="pass" onclick="setSimulationPath('pass')">
-                        <span class="status-indicator stat-pass"></span> Simulate PASS
-                      </button>
-                      <button class="path-btn" data-path="fail" onclick="setSimulationPath('fail')">
-                        <span class="status-indicator stat-fail"></span> Simulate FAIL (Cadmium Heavy Metal)
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Right Column: Order Summary Card -->
-              <div class="details-right">
-                <div class="order-summary-card">
-                  <h4>Order Summary</h4>
-                  <div class="summary-line">
-                    <span class="sum-label">Laboratory</span>
-                    <span class="sum-value" id="summary-lab">EuroLab Munich</span>
-                  </div>
-                  <div class="summary-line">
-                    <span class="sum-label">Destination market</span>
-                    <span class="sum-value" id="summary-market">Germany (DE)</span>
-                  </div>
-                  <div class="summary-line">
-                    <span class="sum-label">Package selection</span>
-                    <span class="sum-value" id="summary-pkg">Full Characterization</span>
-                  </div>
-                  <div class="summary-line">
-                    <span class="sum-label">Sample weight</span>
-                    <span class="sum-value" id="summary-qty">10g</span>
-                  </div>
-                  
-                  <div class="summary-divider"></div>
-                  
-                  <div class="summary-line">
-                    <span class="sum-label">Subtotal</span>
-                    <span class="sum-value" id="summary-subtotal">€448.00</span>
-                  </div>
-                  <div class="summary-line">
-                    <span class="sum-label">Shipping (DHL Express)</span>
-                    <span class="sum-value">€14.00</span>
-                  </div>
-                  <div class="summary-line">
-                    <span class="sum-label">VAT (19%)</span>
-                    <span class="sum-value" id="summary-vat">€87.78</span>
-                  </div>
-                  
-                  <div class="summary-total-line">
-                    <span>Total charge</span>
-                    <span class="total-price" id="summary-total">€549.78</span>
-                  </div>
-
-                  <div class="credits-notice">
-                    <div class="info-bubble">i</div>
-                    <p>Sample ID and DHL shipping label are automatically generated upon payment verification.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="panel-actions">
-              <button class="btn btn-secondary" onclick="goToStep(3)">&larr; Back</button>
-              <button class="btn btn-primary" onclick="submitSampleOrder()">Confirm &amp; Pay &rarr;</button>
-            </div>
-          </div>
-
-          <!-- Step 5: Live Tracking, Certificate of Analysis & Verification -->
-          <div class="sandbox-step-panel" id="step-panel-5">
-            <div class="panel-header">
-              <h3>Track sample, receive the verdict.</h3>
-              <p>Below is a live rendering of the Simpleafied Order Timeline and the final generated Certificate of Analysis (CoA).</p>
-            </div>
-
-            <!-- Simulation loading / progress state -->
-            <div class="simulation-loading-screen" id="sim-loading-screen">
-              <div class="sim-spinner-container">
-                <div class="sim-spinner"></div>
-                <h4>Processing Sample Order...</h4>
-                <p>Generating digital chain-of-custody, printing manifest, and notifying DHL...</p>
-              </div>
-            </div>
-
-            <div class="sandbox-results-layout" id="sim-results-layout">
-              <!-- Left Side: Timeline & Live Event Log -->
-              <div class="results-left">
-                <!-- Order Header Info -->
-                <div class="results-header-info">
-                  <div class="info-pill"><strong>Order:</strong> <span id="res-ord-id" class="code-font">ORD-2026-07-4481</span></div>
-                  <div class="info-pill"><strong>Sample:</strong> <span id="res-smp-id" class="code-font">SMP-10421</span></div>
-                  <div class="info-pill"><strong>Lab:</strong> <span id="res-lab-name">EuroLab Munich</span></div>
-                </div>
-
-                <!-- Custom Stepper -->
-                <div class="tracking-stepper">
-                  <div class="stepper-line"></div>
-                  <div class="step-dot completed" data-tip="Order Created">✓</div>
-                  <div class="step-dot completed" data-tip="Awaiting Shipment">✓</div>
-                  <div class="step-dot completed" data-tip="In Transit">✓</div>
-                  <div class="step-dot completed" data-tip="Received by Lab">✓</div>
-                  <div class="step-dot active" data-tip="In Testing"></div>
-                  <div class="step-dot" data-tip="Quality Review"></div>
-                  <div class="step-dot" data-tip="CoA Issued"></div>
-                </div>
-                <div class="stepper-labels">
-                  <span>Created</span>
-                  <span>In Transit</span>
-                  <span>Received</span>
-                  <span class="text-accent-weight">Testing</span>
-                  <span>CoA Issued</span>
-                </div>
-
-                <!-- Event log -->
-                <h4 class="subsection-title">Immutable Event Log</h4>
-                <div class="event-log-container">
-                  <div class="event-item">
-                    <span class="event-time code-font">17:55:01</span>
-                    <span class="event-badge badge-info">STATUS_CHANGED</span>
-                    <span class="event-text">Order initialized. Payment confirmed via account credits.</span>
-                  </div>
-                  <div class="event-item">
-                    <span class="event-time code-font">17:55:04</span>
-                    <span class="event-badge badge-info">SAMPLE_LOGGED</span>
-                    <span class="event-text">DHL shipping label generated. Pre-paid pickup request dispatched.</span>
-                  </div>
-                  <div class="event-item">
-                    <span class="event-time code-font">17:55:10</span>
-                    <span class="event-badge badge-info">IN_TRANSIT</span>
-                    <span class="event-text">Sample picked up by DHL courier. Departure scan Frankfurt Hub.</span>
-                  </div>
-                  <div class="event-item">
-                    <span class="event-time code-font">17:55:15</span>
-                    <span class="event-badge badge-info">SAMPLE_RECEIVED</span>
-                    <span class="event-text">Lab confirmed arrival. Box packaging intact. Temperature in range (19.4°C).</span>
-                  </div>
-                  <div class="event-item active" id="event-in-testing">
-                    <span class="event-time code-font">17:55:20</span>
-                    <span class="event-badge badge-warn animate-pulse">IN_TESTING</span>
-                    <span class="event-text" id="active-testing-text">HPLC Cannabinoid profile started by analyst M. LEHNER.</span>
-                  </div>
-                  <div class="event-item hidden" id="event-qc-review">
-                    <span class="event-time code-font">17:55:24</span>
-                    <span class="event-badge badge-info">QC_REVIEW</span>
-                    <span class="event-text">Awaiting QA Lead sign-off. Double-check heavy metal ICP-MS logs.</span>
-                  </div>
-                  <div class="event-item hidden" id="event-coa-issued">
-                    <span class="event-time code-font">17:55:28</span>
-                    <span class="event-badge badge-pass" id="event-coa-badge">COA_ISSUED</span>
-                    <span class="event-text" id="event-coa-text">Certificate of Analysis signed and hashed on chain. Verdict: PASS.</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Right Side: Live Certificate of Analysis Preview -->
-              <div class="results-right">
-                <!-- Outer Box representing the certificate -->
-                <div class="coa-card" id="coa-document-card">
-                  
-                  <!-- Top Verdict bar -->
-                  <div class="coa-verdict-banner" id="coa-verdict-banner">
-                    <span class="verdict-icon" id="coa-verdict-icon">✓</span>
-                    <div class="verdict-details">
-                      <h4 id="coa-verdict-title">PENDING ANALYSIS</h4>
-                      <p id="coa-verdict-subtitle">Testing is currently in progress at laboratory.</p>
-                    </div>
-                  </div>
-
-                  <!-- Document Header -->
-                  <div class="coa-doc-header">
-                    <div class="coa-lab-logo">
-                      <div class="logo-box-stub">EM</div>
-                      <div>
-                        <strong id="coa-lab-name-val">EuroLab Munich GmbH</strong>
-                        <span class="coa-meta">DAkkS D-PL-19211 | ISO 17025</span>
-                      </div>
-                    </div>
-                    <div class="coa-number-block">
-                      <span class="coa-label">CERTIFICATE OF ANALYSIS</span>
-                      <strong class="code-font" id="coa-num-val">COA-2026-EM-8841</strong>
-                    </div>
-                  </div>
-
-                  <!-- Metadata Grid -->
-                  <div class="coa-meta-grid">
-                    <div>
-                      <span class="coa-label">SAMPLE</span>
-                      <strong id="coa-sample-name-val">Bavarian Haze</strong>
-                    </div>
-                    <div>
-                      <span class="coa-label">BATCH</span>
-                      <strong class="code-font" id="coa-batch-val">BH-25W30-IDR-04</strong>
-                    </div>
-                    <div>
-                      <span class="coa-label">TARGET MARKET</span>
-                      <strong id="coa-market-val">Germany &bull; Medical</strong>
-                    </div>
-                    <div>
-                      <span class="coa-label">DATE ISSUED</span>
-                      <strong class="code-font" id="coa-date-val">Awaiting...</strong>
-                    </div>
-                  </div>
-
-                  <!-- Results table -->
-                  <table class="coa-results-table">
-                    <thead>
-                      <tr>
-                        <th>ANALYTE</th>
-                        <th>RESULT</th>
-                        <th>LIMIT</th>
-                        <th>STATUS</th>
-                      </tr>
-                    </thead>
-                    <tbody id="coa-results-tbody">
-                      <tr>
-                        <td colspan="4" class="table-loading-placeholder">Results will render as they are released from testing...</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                  <!-- Footer row with signatures and QR code -->
-                  <div class="coa-doc-footer">
-                    <div class="signatures-block">
-                      <div class="sig-field">
-                        <span class="coa-label">ANALYST SIGNATURE</span>
-                        <div class="sig-rendered" id="sig-analyst">Awaiting testing...</div>
-                        <span class="coa-meta" id="sig-analyst-meta">Dr. M. Hartmann</span>
-                      </div>
-                      <div class="sig-field">
-                        <span class="coa-label">QUALITY REVIEW</span>
-                        <div class="sig-rendered" id="sig-qa">Awaiting QC...</div>
-                        <span class="coa-meta" id="sig-qa-meta">A. Weber, QA Lead</span>
-                      </div>
-                    </div>
-                    <div class="qr-block">
-                      <span class="coa-label">QR VERIFY</span>
-                      <div class="qr-code-placeholder" id="coa-qr-code">
-                        <div class="qr-inner-stub"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Remediation / Next Action Card -->
-                <div class="remediation-card hidden" id="remediation-guidance-card">
-                  <div class="remediation-title">
-                    <svg class="icon icon-info" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-                    REMEDIATION GUIDANCE
-                  </div>
-                  <h5 id="remediation-header">Cadmium 1.5 ppm in flower — likely soil / fertilizer uptake</h5>
-                  <p>Common causes: phosphate-rich fertilizers, contaminated soil, untreated greywater irrigation.</p>
-                  <h6>Recommended steps before next harvest:</h6>
-                  <ul>
-                    <li>Run Soil ICP-MS test on cultivation plot.</li>
-                    <li>Switch to low-Cd phosphate source.</li>
-                    <li>Audit fertilizer batch FT-25-094.</li>
-                  </ul>
-                  <div class="remediation-buttons">
-                    <button class="btn btn-accent-dark" onclick="alert('Retest ordered!')">Order Soil Retest</button>
-                    <button class="btn btn-secondary" onclick="alert('Support ticket created!')">Open Help Desk Ticket</button>
-                  </div>
-                </div>
-
-                <!-- Verification Mobile Screen Button -->
-                <button class="btn btn-secondary full-width-btn hidden" id="btn-show-public-qr" onclick="toggleQrVerificationPage()">
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
-                  View Public QR Verification Page (Mobile view)
-                </button>
-              </div>
-            </div>
-
-            <!-- Mobile Public QR Verification Modal / View -->
-            <div class="modal-overlay" id="qr-modal-view">
-              <div class="mobile-device-wrapper">
-                <div class="mobile-screen">
-                  <div class="mobile-header">
-                    <span class="carrier">Simpleafied</span>
-                    <span class="time-stamp">17:55</span>
-                    <span class="battery">🔋</span>
-                  </div>
-                  
-                  <div class="mobile-address-bar">
-                    <svg class="icon icon-lock" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
-                    <span>simpleafied.com/verify/...</span>
-                  </div>
-
-                  <div class="mobile-body" id="mobile-verification-body">
-                    <!-- Loaded dynamically -->
-                  </div>
-                  
-                  <button class="mobile-close-btn" onclick="toggleQrVerificationPage()">Close Preview</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="panel-actions" style="margin-top: 24px;">
-              <button class="btn btn-secondary" onclick="goToStep(4)">&larr; Back to Order</button>
-              <button class="btn btn-accent" onclick="resetSandbox()">Restart Sandbox Simulation ↻</button>
-            </div>
-          </div>
-          
         </div>
       </div>
-    </div>
-  </section>
+    </article>
 
-  <!-- Motifs / Value Proposition Section -->
-  <section id="motifs-section" class="motifs-section container">
-    <div class="section-label">03 — VALUE PROPOSITION</div>
-    <div class="section-header-row">
-      <h2 class="section-title text-balance">Three motifs. <span class="text-accent">One promise.</span></h2>
-      <p class="section-description">
-        Every screen, every interaction, every result reinforces the same product narrative.
+    <!-- Chapter 2: Genesis -->
+    <article class="chapter-block" id="chapter-genesis">
+      <div class="chapter-meta">CHAPTER 02 &bull; GENESIS</div>
+      <blockquote class="chapter-quote">
+        &ldquo;Every product tells a complete story.&rdquo;
+      </blockquote>
+      <p class="chapter-desc">
+        Simpleafied Genesis maps complete operational lineage from raw chemical precursor to finished pharmaceutical distribution. Full forward and backward recall capability in seconds.
       </p>
-    </div>
 
-    <div class="motifs-grid">
-      <!-- Motif 1 -->
-      <div class="motif-card">
-        <div class="motif-icon-container">
-          <svg class="motif-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>
+      <div class="chapter-stage">
+        <div class="chapter-ui-frame">
+          <div class="c-ui-header">
+            <div class="c-ui-dots"><span></span><span></span><span></span></div>
+            <div class="c-ui-title">Simpleafied Genesis &mdash; Pharmaceutical Batch Genealogy &amp; Traceability</div>
+            <div class="c-ui-status">EU Annex 11 Compliant</div>
+          </div>
+          <div class="c-ui-body genesis-chapter-body">
+            <div class="genealogy-interactive-view">
+              <div class="g-node-card">
+                <span class="g-tag">RAW MATERIAL SUPPLIER</span>
+                <h5 class="g-node-name">Precursor Lot #PR-7740</h5>
+                <p class="g-node-sub">Pharma Ingredients AG &bull; Basle, CH</p>
+                <div class="g-badge badge-valid">CoA Verified &check;</div>
+              </div>
+
+              <div class="g-arrow-link">&rarr;</div>
+
+              <div class="g-node-card g-node-active">
+                <span class="g-tag">MANUFACTURING BATCH</span>
+                <h5 class="g-node-name">Batch #PH-8842-A</h5>
+                <p class="g-node-sub">Cleanroom A2 &bull; 14,200 Vials</p>
+                <div class="g-badge badge-valid">In-Process Controls PASSED</div>
+              </div>
+
+              <div class="g-arrow-link">&rarr;</div>
+
+              <div class="g-node-card">
+                <span class="g-tag">RELEASE &amp; DISTRIBUTION</span>
+                <h5 class="g-node-name">Logistics Hub Frankfurt</h5>
+                <p class="g-node-sub">Cold Chain 2°C &ndash; 8°C Monitored</p>
+                <div class="g-badge badge-valid">GS1 Serialized &check;</div>
+              </div>
+            </div>
+
+            <div class="genealogy-detail-bar">
+              <div class="detail-item">
+                <span class="dt-lbl">Recall Preparation Time</span>
+                <span class="dt-val">&lt; 3 Seconds</span>
+              </div>
+              <div class="detail-item">
+                <span class="dt-lbl">Chain of Custody Nodes</span>
+                <span class="dt-val">100% Cryptographically Bound</span>
+              </div>
+              <div class="detail-item">
+                <span class="dt-lbl">Yield Reconciliation</span>
+                <span class="dt-val">99.94% Variance Standard</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="motif-num">MOTIF 01</div>
-        <h3>Compliance Engine</h3>
-        <p>Regulatory intelligence that turns shifting market rules into a precise testing prescription — automatically.</p>
-        <a href="#sandbox-section" class="motif-link" onclick="jumpToStep(1)">→ KNOW WHAT TO TEST</a>
       </div>
+    </article>
 
-      <!-- Motif 2 -->
-      <div class="motif-card highlight-motif">
-        <div class="motif-icon-container">
-          <svg class="motif-icon text-accent" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-        </div>
-        <div class="motif-num">MOTIF 02</div>
-        <h3>Laboratory Marketplace</h3>
-        <p>Booking.com for accredited cannabis labs — compare panels, turnaround, pricing, and accreditation in one place.</p>
-        <a href="#sandbox-section" class="motif-link text-accent" onclick="jumpToStep(3)">→ FIND WHERE TO TEST</a>
-      </div>
-
-      <!-- Motif 3 -->
-      <div class="motif-card">
-        <div class="motif-icon-container">
-          <svg class="motif-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-        </div>
-        <div class="motif-num">MOTIF 03</div>
-        <h3>Verified Results</h3>
-        <p>Digitally signed Certificates of Analysis with QR verification and per-market pass/fail interpretation.</p>
-        <a href="#sandbox-section" class="motif-link" onclick="jumpToStep(4)">→ KNOW IF YOU PASSED</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Dashboard Section -->
-  <section id="dashboard-section" class="dashboard-section-class container">
-    <div class="section-label">04 — HISTORICAL DASHBOARD</div>
-    <div class="section-header-row">
-      <h2 class="section-title text-balance">Every sample. Every trend. <span class="text-accent">One view.</span></h2>
-      <p class="section-description">
-        Pass/fail rates, cannabinoid drift, terpene fingerprints, and audit-ready CoA history — at the batch level.
+    <!-- Chapter 3: Nexus -->
+    <article class="chapter-block" id="chapter-nexus">
+      <div class="chapter-meta">CHAPTER 03 &bull; NEXUS</div>
+      <blockquote class="chapter-quote">
+        &ldquo;Every sample has a history.&rdquo;
+      </blockquote>
+      <p class="chapter-desc">
+        Simpleafied Nexus connects analytical instrumentation directly to compliance rules. Eliminating manual data transcription and providing instant, verified Certificates of Analysis.
       </p>
-    </div>
 
-    <!-- Live dashboard preview component -->
-    <div class="dashboard-grid">
-      <!-- KPI Row -->
-      <div class="kpi-strip">
-        <div class="kpi-card">
-          <span class="kpi-label">SAMPLES THIS QUARTER</span>
-          <div class="kpi-number code-font">147</div>
-          <span class="kpi-delta delta-up">↑ 23% <span class="kpi-subtext">vs Q1</span></span>
-        </div>
-        <div class="kpi-card">
-          <span class="kpi-label">COMPLIANCE PASS RATE</span>
-          <div class="kpi-number code-font">94.6%</div>
-          <span class="kpi-delta delta-up">↑ 2.1pp <span class="kpi-subtext">vs trailing 90d</span></span>
-        </div>
-        <div class="kpi-card">
-          <span class="kpi-label">AVG TURNAROUND</span>
-          <div class="kpi-number code-font">3.4 <span class="days-text">days</span></div>
-          <span class="kpi-delta delta-down">↓ 1.2d <span class="kpi-subtext">vs industry avg</span></span>
-        </div>
-        <div class="kpi-card dark-kpi">
-          <span class="kpi-label">MARKETS ACTIVE</span>
-          <div class="kpi-number code-font">6 <span class="small-text">/ 46</span></div>
-          <span class="kpi-subtext-white">DE &bull; UK &bull; CZ &bull; AU &bull; CH &bull; PL</span>
-        </div>
-      </div>
-
-      <!-- Charts layout -->
-      <div class="dashboard-charts-row">
-        <!-- Chart 1: Content Drift -->
-        <div class="chart-card line-chart-card">
-          <div class="chart-header">
-            <div>
-              <span class="chart-label">CANNABINOID TREND &bull; LAST 12 BATCHES</span>
-              <h4>THC &amp; CBD content drift</h4>
-            </div>
-            <div class="chart-legend">
-              <span class="legend-item"><span class="legend-color color-thc"></span> Total THC</span>
-              <span class="legend-item"><span class="legend-color color-cbd"></span> Total CBD</span>
-            </div>
+      <div class="chapter-stage">
+        <div class="chapter-ui-frame">
+          <div class="c-ui-header">
+            <div class="c-ui-dots"><span></span><span></span><span></span></div>
+            <div class="c-ui-title">Simpleafied Nexus &mdash; Laboratory Information &amp; Instrument Integration</div>
+            <div class="c-ui-status">ISO/IEC 17025 Compliant</div>
           </div>
-          
-          <!-- SVG Line Chart Drawing -->
-          <div class="chart-container">
-            <svg class="drift-chart-svg" viewBox="0 0 600 240">
-              <!-- Y Axis labels -->
-              <text x="35" y="40" class="axis-text">25%</text>
-              <line x1="50" y1="35" x2="570" y2="35" class="grid-line" />
-              
-              <text x="35" y="90" class="axis-text">20%</text>
-              <line x1="50" y1="85" x2="570" y2="85" class="grid-line" />
-              
-              <text x="35" y="140" class="axis-text">15%</text>
-              <line x1="50" y1="135" x2="570" y2="135" class="grid-line" />
-              
-              <text x="35" y="190" class="axis-text">10%</text>
-              <line x1="50" y1="185" x2="570" y2="185" class="grid-line" />
-              
-              <!-- Grid line at 0 -->
-              <line x1="50" y1="210" x2="570" y2="210" class="axis-line" />
-              
-              <!-- X Axis labels -->
-              <text x="50" y="230" class="axis-text text-middle">B-01</text>
-              <text x="145" y="230" class="axis-text text-middle">B-03</text>
-              <text x="240" y="230" class="axis-text text-middle">B-05</text>
-              <text x="335" y="230" class="axis-text text-middle">B-07</text>
-              <text x="430" y="230" class="axis-text text-middle">B-09</text>
-              <text x="525" y="230" class="axis-text text-middle">B-11</text>
-              
-              <!-- THC Area Under Curve -->
-              <path d="M 50 120 L 95 110 L 145 125 L 195 115 L 240 108 L 290 98 L 335 112 L 385 102 L 430 92 L 480 105 L 525 96 L 525 210 L 50 210 Z" class="chart-area Area-THC" />
-              
-              <!-- THC Line path -->
-              <path d="M 50 120 L 95 110 L 145 125 L 195 115 L 240 108 L 290 98 L 335 112 L 385 102 L 430 92 L 480 105 L 525 96" class="chart-line line-thc" />
-              
-              <!-- CBD Line path (dashed) -->
-              <path d="M 50 170 L 95 174 L 145 168 L 195 168 L 240 162 L 290 167 L 335 166 L 385 161 L 430 165 L 480 159 L 525 162" class="chart-line line-cbd" />
-              
-              <!-- Data Points THC -->
-              <circle cx="50" cy="120" r="4" class="dot-thc" />
-              <circle cx="95" cy="110" r="4" class="dot-thc" />
-              <circle cx="145" cy="125" r="4" class="dot-thc" />
-              <circle cx="195" cy="115" r="4" class="dot-thc" />
-              <circle cx="240" cy="108" r="4" class="dot-thc" />
-              <circle cx="290" cy="98" r="4" class="dot-thc" />
-              <circle cx="335" cy="112" r="4" class="dot-thc" />
-              <circle cx="385" cy="102" r="4" class="dot-thc" />
-              <circle cx="430" cy="92" r="4" class="dot-thc" />
-              <circle cx="480" cy="105" r="4" class="dot-thc" />
-              <circle cx="525" cy="96" r="4" class="dot-thc" />
-              
-              <!-- Data Points CBD -->
-              <circle cx="50" cy="170" r="3.5" class="dot-cbd" />
-              <circle cx="95" cy="174" r="3.5" class="dot-cbd" />
-              <circle cx="145" cy="168" r="3.5" class="dot-cbd" />
-              <circle cx="195" cy="168" r="3.5" class="dot-cbd" />
-              <circle cx="240" cy="162" r="3.5" class="dot-cbd" />
-              <circle cx="290" cy="167" r="3.5" class="dot-cbd" />
-              <circle cx="335" cy="166" r="3.5" class="dot-cbd" />
-              <circle cx="385" cy="161" r="3.5" class="dot-cbd" />
-              <circle cx="430" cy="165" r="3.5" class="dot-cbd" />
-              <circle cx="480" cy="159" r="3.5" class="dot-cbd" />
-              <circle cx="525" cy="162" r="3.5" class="dot-cbd" />
-            </svg>
-          </div>
-        </div>
+          <div class="c-ui-body nexus-chapter-body">
+            <div class="lims-dashboard-grid">
+              <div class="lims-card">
+                <span class="lc-title">Sample Registry &amp; Lifecycle</span>
+                <div class="sample-lifecycle-steps">
+                  <div class="lc-step s-complete">1. Sample Logging &amp; Barcode</div>
+                  <div class="lc-step s-complete">2. Instrument Assay Execution</div>
+                  <div class="lc-step s-complete">3. Automated Out-of-Spec (OOS) Check</div>
+                  <div class="lc-step s-active">4. CoA Generation &amp; Direct LIMS Sync</div>
+                </div>
+              </div>
 
-        <!-- Chart 2: Failure Breakdown -->
-        <div class="chart-card dark-chart-card">
-          <span class="chart-label text-grey">PASS / FAIL &bull; BY ANALYTE GROUP</span>
-          <h4>Where batches fail most</h4>
-          
-          <div class="failures-list">
-            <div class="fail-stat-item">
-              <div class="fail-stat-label">
-                <span>Heavy Metals</span>
-                <span class="code-font text-fail">4.1% fail</span>
-              </div>
-              <div class="progress-track">
-                <div class="progress-fill fill-fail" style="width: 82%;"></div>
-              </div>
-            </div>
-            
-            <div class="fail-stat-item">
-              <div class="fail-stat-label">
-                <span>Microbiology</span>
-                <span class="code-font text-warn">2.3% fail</span>
-              </div>
-              <div class="progress-track">
-                <div class="progress-fill fill-warn" style="width: 46%;"></div>
-              </div>
-            </div>
-
-            <div class="fail-stat-item">
-              <div class="fail-stat-label">
-                <span>Pesticides</span>
-                <span class="code-font text-warn">0.6% fail</span>
-              </div>
-              <div class="progress-track">
-                <div class="progress-fill fill-info" style="width: 12%;"></div>
-              </div>
-            </div>
-
-            <div class="fail-stat-item">
-              <div class="fail-stat-label">
-                <span>Cannabinoids (potency)</span>
-                <span class="code-font text-pass">0.0% fail</span>
-              </div>
-              <div class="progress-track">
-                <div class="progress-fill fill-pass" style="width: 0%;"></div>
+              <div class="lims-card">
+                <span class="lc-title">Live Instrument Feeds</span>
+                <div class="instrument-list">
+                  <div class="inst-item">
+                    <span class="inst-name">Agilent HPLC-1290 #01</span>
+                    <span class="inst-status status-online">Running Assay &bull; Potency</span>
+                  </div>
+                  <div class="inst-item">
+                    <span class="inst-name">Thermo ICP-MS #03</span>
+                    <span class="inst-status status-online">Idle &bull; Calibration Valid</span>
+                  </div>
+                  <div class="inst-item">
+                    <span class="inst-name">Shimadzu GC-MS #02</span>
+                    <span class="inst-status status-online">Completed Lot #RM-90412</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </article>
+
   </section>
 
-  <!-- Platform Architecture Section -->
-  <section id="architecture-section" class="architecture-section container">
-    <div class="section-label">05 — PLATFORM ARCHITECTURE</div>
-    <div class="section-header-row">
-      <h2 class="section-title text-balance">Built like infrastructure. <span class="text-accent">Used like a product.</span></h2>
-      <p class="section-description">
-        A four-layer stack: portal &rarr; intelligence &rarr; marketplace &rarr; LIMS integrations. Fully audited, automated, and secure.
-      </p>
-    </div>
-
-    <div class="architecture-centered-layout">
-      <!-- Diagram Column -->
-      <div class="arch-diagram-card">
-        <div class="diagram-layers">
-          <!-- Layer 1 -->
-          <div class="layer-item">
-            <div class="layer-meta">LAYER 01</div>
-            <div class="layer-body">
-              <h4>Customer Portal</h4>
-              <div class="badge-row">
-                <span class="tech-badge">Web</span>
-                <span class="tech-badge">iOS</span>
-                <span class="tech-badge">Android</span>
-                <span class="tech-badge">API</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="arrow-divider">↓</div>
-
-          <!-- Layer 2 -->
-          <div class="layer-item highlight-layer">
-            <div class="layer-meta text-accent-dark">LAYER 02 &bull; CORE IP</div>
-            <div class="layer-body">
-              <h4>Compliance Intelligence Engine</h4>
-              <div class="badge-row">
-                <span class="tech-badge badge-dark">Regulatory DB</span>
-                <span class="tech-badge badge-dark">Rules Engine</span>
-                <span class="tech-badge badge-dark">Verdict API</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="arrow-divider">↓</div>
-
-          <!-- Layer 3 -->
-          <div class="layer-item">
-            <div class="layer-meta">LAYER 03</div>
-            <div class="layer-body">
-              <h4>Laboratory Marketplace</h4>
-              <div class="badge-row">
-                <span class="tech-badge">Quoting</span>
-                <span class="tech-badge">Routing</span>
-                <span class="tech-badge">Payments</span>
-                <span class="tech-badge">Tracking</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="arrow-divider">↓</div>
-
-          <!-- Layer 4 -->
-          <div class="layer-item">
-            <div class="layer-meta">LAYER 04</div>
-            <div class="layer-body">
-              <h4>LIMS Integration Layer</h4>
-              <div class="badge-row">
-                <span class="tech-badge">REST</span>
-                <span class="tech-badge">Webhooks</span>
-                <span class="tech-badge">SDK</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="arch-footer-meta">
-          ↓ LABORATORIES &bull; INSTRUMENTS &bull; ANALYSTS ↓
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Roadmap Section -->
-  <section id="roadmap-section" class="roadmap-section container">
-    <div class="section-label">06 — ROADMAP &amp; VISION</div>
-    <div class="section-header-row">
-      <h2 class="section-title text-balance">Marketplace today. <span class="text-accent">Global network tomorrow.</span></h2>
-      <p class="section-description">
-        Three phases — each one expanding the moat we already started building.
-      </p>
-    </div>
-
-    <div class="roadmap-grid">
-      <!-- Phase 1 -->
-      <div class="roadmap-card active-card">
-        <div class="roadmap-header">
-          <span class="phase-num">PHASE 01</span>
-          <span class="phase-status live">LIVE NOW</span>
-        </div>
-        <h3>Foundation</h3>
-        <p>Trustworthy plumbing for the industry's first true digital workflow.</p>
-        <ul class="roadmap-list">
-          <li>Laboratory Marketplace</li>
-          <li>Sample Tracking</li>
-          <li>Digital CoA Generation</li>
-          <li>QR Verification</li>
-        </ul>
-      </div>
-
-      <!-- Phase 2 -->
-      <div class="roadmap-card">
-        <div class="roadmap-header">
-          <span class="phase-num">PHASE 02</span>
-          <span class="phase-status">2026</span>
-        </div>
-        <h3>Intelligence</h3>
-        <p>The Compliance Engine becomes the platform's gravitational center.</p>
-        <ul class="roadmap-list">
-          <li>Compliance Intelligence Engine</li>
-          <li>Regulatory Database</li>
-          <li>Laboratory Integrations (LIMS)</li>
-          <li>Per-market verdict API</li>
-        </ul>
-      </div>
-
-      <!-- Phase 3 -->
-      <div class="roadmap-card dark-roadmap-card">
-        <div class="roadmap-header">
-          <span class="phase-num">PHASE 03</span>
-          <span class="phase-status text-accent">2027 +</span>
-        </div>
-        <h3>Network</h3>
-        <p>The category-defining data layer for global cannabis compliance.</p>
-        <ul class="roadmap-list">
-          <li>Global Regulatory Network</li>
-          <li>Industry Benchmarking</li>
-          <li>Market Intelligence</li>
-          <li>Compliance Analytics</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Who Wins / Stakeholders Section -->
-  <section class="who-wins-section container">
-    <div class="section-label">07 — WHO WINS</div>
-    <div class="section-header-row">
-      <h2 class="section-title text-balance">Three sides. <span class="text-accent">All compound.</span></h2>
-      <p class="section-description">
-        The marketplace works because every participant gets a faster, cheaper, more defensible version of what they do today.
-      </p>
-    </div>
-
-    <div class="who-wins-grid">
-      <!-- Growers -->
-      <div class="stakeholder-card">
-        <div class="stakeholder-icon-container">
-          <span class="icon-stub">⭐️</span>
-        </div>
-        <span class="stakeholder-tag">FOR BUSINESSES</span>
-        <h3>Growers, processors, brands</h3>
-        <ul class="stakeholder-benefit-list">
-          <li>Know exactly what to test</li>
-          <li>Reduce compliance risk &amp; rework</li>
-          <li>Faster access to accredited labs</li>
-          <li>Centralized records &amp; audit trail</li>
-        </ul>
-      </div>
-
-      <!-- Labs -->
-      <div class="stakeholder-card highlight-stakeholder">
-        <div class="stakeholder-icon-container">
-          <span class="icon-stub text-accent">🧪</span>
-        </div>
-        <span class="stakeholder-tag text-accent-dark">FOR LABORATORIES</span>
-        <h3>Accredited testing partners</h3>
-        <ul class="stakeholder-benefit-list benefit-list-accent">
-          <li>Customer acquisition channel</li>
-          <li>Less admin, more analyst time</li>
-          <li>End-to-end digital workflows</li>
-          <li>Automated CoA generation</li>
-        </ul>
-      </div>
-
-      <!-- Regulators -->
-      <div class="stakeholder-card">
-        <div class="stakeholder-icon-container">
-          <span class="icon-stub">🛡️</span>
-        </div>
-        <span class="stakeholder-tag">FOR REGULATORS</span>
-        <h3>Government &amp; certification bodies</h3>
-        <ul class="stakeholder-benefit-list">
-          <li>End-to-end supply chain transparency</li>
-          <li>Traceable, immutable records</li>
-          <li>Cryptographically verified CoAs</li>
-          <li>Stronger oversight, less manual review</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Bottom Call to Action Section -->
-  <section class="bottom-cta-section">
-    <div class="container bottom-cta-container">
-      <div class="badge badge-outline">THE FINAL MESSAGE</div>
-      <h2 class="bottom-cta-title">
-        Simpleafied is the <span class="text-accent">compliance infrastructure layer</span> for cannabis &amp; hemp — globally.
+  <!-- Ecosystem Architecture Section -->
+  <section class="platform-ecosystem" id="platform">
+    <div class="section-container">
+      <div class="meta-tag text-center">Ecosystem Architecture</div>
+      <h2 class="editorial-title text-center">
+        One Platform. Three Products. Endless Connections.
       </h2>
-      <p class="bottom-cta-links">
-        <span>Know what to test.</span>
-        <span class="bullet">/</span>
-        <span>Find where to test.</span>
-        <span class="bullet">/</span>
-        <span class="text-accent">Know if you passed.</span>
+      <p class="editorial-subhead text-center">
+        Simpleafied Intelligence operates as a unified engine. Each product strengthens the compliance data graph of the others.
       </p>
-      
-      <div class="cta-form-wrapper">
-        <a href="#sandbox-section" class="btn btn-accent btn-large">Launch Sandbox Demo</a>
-        <a href="mailto:contact@simpleafied.app" class="btn btn-secondary btn-large">Contact contact@simpleafied.app</a>
+
+      <!-- Animated Interactive Node Diagram -->
+      <div class="diagram-wrapper">
+        <svg class="relationship-svg" id="ecosystem-svg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <filter id="shadow-light" x="-10%" y="-10%" width="120%" height="120%">
+              <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#111315" flood-opacity="0.06"/>
+            </filter>
+          </defs>
+
+          <!-- Outer Capability Ring Lines -->
+          <circle cx="500" cy="300" r="230" stroke="#E5E4E0" stroke-width="1.5" stroke-dasharray="6 6" fill="none"/>
+
+          <!-- Connecting Lines from Center to Products -->
+          <line x1="500" y1="300" x2="500" y2="100" class="conn-line conn-active" />
+          <line x1="500" y1="300" x2="250" y2="440" class="conn-line conn-active" />
+          <line x1="500" y1="300" x2="750" y2="440" class="conn-line conn-active" />
+
+          <!-- Connecting Lines to Capabilities -->
+          <line x1="500" y1="300" x2="270" y2="300" class="conn-line-sub" />
+          <line x1="500" y1="300" x2="730" y2="300" class="conn-line-sub" />
+          <line x1="500" y1="300" x2="360" y2="150" class="conn-line-sub" />
+          <line x1="500" y1="300" x2="640" y2="150" class="conn-line-sub" />
+
+          <!-- Center Node: Simpleafied Intelligence -->
+          <g class="diagram-node node-center" transform="translate(500, 300)">
+            <circle r="72" fill="#0A192F" filter="url(#shadow-light)"/>
+            <circle r="64" fill="#0A192F" stroke="#FAF9F6" stroke-width="2"/>
+            <text y="-6" text-anchor="middle" fill="#FAF9F6" font-family="Newsreader" font-size="19" font-weight="500">Simpleafied</text>
+            <text y="16" text-anchor="middle" fill="#059669" font-family="Inter" font-size="11" font-weight="600" letter-spacing="1">INTELLIGENCE</text>
+          </g>
+
+          <!-- Top Node: Veritas -->
+          <g class="diagram-node node-product" transform="translate(500, 100)" id="node-veritas">
+            <rect x="-90" y="-36" width="180" height="72" rx="12" fill="#FAF9F6" stroke="#111315" stroke-width="1.5" filter="url(#shadow-light)"/>
+            <text y="-6" text-anchor="middle" fill="#111315" font-family="Newsreader" font-size="18" font-weight="600">VERITAS</text>
+            <text y="14" text-anchor="middle" fill="#4A4D52" font-family="Inter" font-size="11">Enterprise Quality</text>
+          </g>
+
+          <!-- Left Node: Genesis -->
+          <g class="diagram-node node-product" transform="translate(250, 440)" id="node-genesis">
+            <rect x="-90" y="-36" width="180" height="72" rx="12" fill="#FAF9F6" stroke="#111315" stroke-width="1.5" filter="url(#shadow-light)"/>
+            <text y="-6" text-anchor="middle" fill="#111315" font-family="Newsreader" font-size="18" font-weight="600">GENESIS</text>
+            <text y="14" text-anchor="middle" fill="#4A4D52" font-family="Inter" font-size="11">Operational Traceability</text>
+          </g>
+
+          <!-- Right Node: Nexus -->
+          <g class="diagram-node node-product" transform="translate(750, 440)" id="node-nexus">
+            <rect x="-90" y="-36" width="180" height="72" rx="12" fill="#FAF9F6" stroke="#111315" stroke-width="1.5" filter="url(#shadow-light)"/>
+            <text y="-6" text-anchor="middle" fill="#111315" font-family="Newsreader" font-size="18" font-weight="600">NEXUS</text>
+            <text y="14" text-anchor="middle" fill="#4A4D52" font-family="Inter" font-size="11">Laboratory LIMS</text>
+          </g>
+
+          <!-- Shared Capability Nodes -->
+          <g class="diagram-node node-cap" transform="translate(270, 300)">
+            <circle r="26" fill="#FAF9F6" stroke="#111315" stroke-width="1.2"/>
+            <text text-anchor="middle" y="4" fill="#111315" font-family="Inter" font-size="10" font-weight="600">Identity</text>
+          </g>
+          <g class="diagram-node node-cap" transform="translate(730, 300)">
+            <circle r="26" fill="#FAF9F6" stroke="#111315" stroke-width="1.2"/>
+            <text text-anchor="middle" y="4" fill="#111315" font-family="Inter" font-size="10" font-weight="600">Audit Trail</text>
+          </g>
+          <g class="diagram-node node-cap" transform="translate(360, 150)">
+            <circle r="26" fill="#FAF9F6" stroke="#111315" stroke-width="1.2"/>
+            <text text-anchor="middle" y="4" fill="#111315" font-family="Inter" font-size="10" font-weight="600">Permissions</text>
+          </g>
+          <g class="diagram-node node-cap" transform="translate(640, 150)">
+            <circle r="26" fill="#FAF9F6" stroke="#111315" stroke-width="1.2"/>
+            <text text-anchor="middle" y="4" fill="#111315" font-family="Inter" font-size="10" font-weight="600">Graph</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="capabilities-grid">
+        <div class="cap-card">
+          <h4 class="cap-title">Unified Audit Trail</h4>
+          <p class="cap-text">Every action across quality, manufacturing, and analytical testing is cryptographically logged into one immutable compliance record.</p>
+        </div>
+        <div class="cap-card">
+          <h4 class="cap-title">21 CFR Part 11 &amp; EU Annex 11</h4>
+          <p class="cap-text">Native support for electronic signatures, double-blind verification, and role-based permission scoping required by European regulators.</p>
+        </div>
+        <div class="cap-card">
+          <h4 class="cap-title">Compliance Graph Engine</h4>
+          <p class="cap-text">Dynamic cross-linking between document approvals, batch genealogy, and laboratory certificates of analysis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries Section -->
+  <section class="industries-section" id="industries">
+    <div class="section-container">
+      <div class="meta-tag">Regulated Industries</div>
+      <h2 class="editorial-title">
+        Engineered for Europe's Most Demanding Sectors.
+      </h2>
+      <p class="editorial-subhead">
+        Simpleafied provides purpose-built compliance architecture tailored to strict regulatory frameworks across Western &amp; Central Europe.
+      </p>
+
+      <div class="industries-grid">
+        <div class="industry-tile" data-industry="life-sciences">
+          <span class="ind-num">01</span>
+          <h3 class="ind-name">Life Sciences</h3>
+          <p class="ind-desc">Comprehensive quality management for biotechnology innovation and medical device regulatory filings.</p>
+          <span class="ind-action">Explore Architecture &rarr;</span>
+        </div>
+
+        <div class="industry-tile" data-industry="biotech">
+          <span class="ind-num">02</span>
+          <h3 class="ind-name">Biotechnology</h3>
+          <p class="ind-desc">Cell and gene therapy sample tracking, environmental monitoring, and cold chain batch verification.</p>
+          <span class="ind-action">Explore Architecture &rarr;</span>
+        </div>
+
+        <div class="industry-tile" data-industry="pharma">
+          <span class="ind-num">03</span>
+          <h3 class="ind-name">Pharmaceutical Manufacturing</h3>
+          <p class="ind-desc">EU GMP Annex 1, Annex 11, and Annex 16 QP release automation with full batch lineage integrity.</p>
+          <span class="ind-action">Explore Architecture &rarr;</span>
+        </div>
+
+        <div class="industry-tile" data-industry="testing-labs">
+          <span class="ind-num">04</span>
+          <h3 class="ind-name">Testing Laboratories</h3>
+          <p class="ind-desc">ISO/IEC 17025 accredited laboratory information management, automated instrument sync, and CoA generation.</p>
+          <span class="ind-action">Explore Architecture &rarr;</span>
+        </div>
+
+        <div class="industry-tile" data-industry="medical-cannabis">
+          <span class="ind-num">05</span>
+          <h3 class="ind-name">Medical Cannabis</h3>
+          <p class="ind-desc">EU GMSP and GACP certified supply chain traceability, potency testing verification, and export compliance.</p>
+          <span class="ind-action">Explore Architecture &rarr;</span>
+        </div>
+
+        <div class="industry-tile" data-industry="advanced-manufacturing">
+          <span class="ind-num">06</span>
+          <h3 class="ind-name">Advanced Manufacturing</h3>
+          <p class="ind-desc">High-precision ISO 9001 and AS9100 quality control for specialty chemical and materials production.</p>
+          <span class="ind-action">Explore Architecture &rarr;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Credibility & Trust Section -->
+  <section class="company-section" id="company">
+    <div class="section-container">
+      <div class="credibility-strip">
+        <div class="cred-item">
+          <span class="cred-value">100%</span>
+          <span class="cred-label">European Data Sovereignty</span>
+        </div>
+        <div class="cred-item">
+          <span class="cred-value">21 CFR 11</span>
+          <span class="cred-label">FDA &amp; EU Annex 11 Validated</span>
+        </div>
+        <div class="cred-item">
+          <span class="cred-value">ISO 27001</span>
+          <span class="cred-label">Information Security Certified</span>
+        </div>
+        <div class="cred-item">
+          <span class="cred-value">99.99%</span>
+          <span class="cred-label">Uptime SLA &amp; Audit Readiness</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Keynote Closing CTA Section -->
+  <section class="final-keynote-cta">
+    <div class="cta-container">
+      <h2 class="final-headline">
+        Build the foundation of trust.
+      </h2>
+      <p class="final-subhead">
+        Whether you manage quality, laboratories, or regulated production, Simpleafied provides the infrastructure to scale with confidence.
+      </p>
+      <div class="final-buttons">
+        <button class="btn btn-primary-keynote btn-huge" id="open-demo-btn-final">Request a Demonstration</button>
+        <a href="#products" class="btn btn-secondary-keynote btn-huge">Explore Products</a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-container">
-      <div class="footer-left">
-        <div class="logo-link">
-          <svg class="logo-svg" viewBox="0 0 100 100" width="28" height="28" style="flex-shrink: 0;">
-            <circle cx="50" cy="50" r="45" fill="url(#logo-grad)" mask="url(#logo-mask)" />
-            <circle cx="62" cy="30" r="4.5" fill="white" />
-            <line x1="49" y1="32" x2="62" y2="30" stroke="white" stroke-width="3.5" stroke-linecap="round" />
-            <circle cx="36" cy="48" r="4.5" fill="white" />
-            <line x1="44" y1="62" x2="36" y2="48" stroke="white" stroke-width="3.5" stroke-linecap="round" />
-            <circle cx="82" cy="46" r="4.5" fill="white" />
-            <line x1="68" y1="52" x2="82" y2="46" stroke="white" stroke-width="3.5" stroke-linecap="round" />
+    <div class="footer-container">
+      <div class="footer-col brand-col">
+        <div class="brand-logo footer-logo">
+          <svg class="brand-mark" viewBox="0 0 40 40" width="24" height="24" fill="none">
+            <circle cx="20" cy="20" r="18" stroke="#111315" stroke-width="2.5"/>
+            <circle cx="20" cy="20" r="3" fill="#059669"/>
           </svg>
-          <span class="logo-text">simp<span class="text-accent-logo">leaf</span>ied<span class="text-accent-logo">.</span></span>
+          <span class="brand-name">Simpleafied<span class="brand-tag">Solutions</span></span>
         </div>
-        <p class="copyright">&copy; 2026 Simpleafied. All rights reserved. Series A &bull; Registered Office: Europe.</p>
+        <p class="footer-tagline">Intelligent compliance infrastructure for Europe's highly regulated industries.</p>
+        <p class="copyright">&copy; 2026 Simpleafied Solutions GmbH. All rights reserved.</p>
       </div>
-      <div class="footer-right">
-        <div class="footer-links">
-          <span>SIMPLEAFIED.COM</span>
-          <span class="sep">&middot;</span>
-          <a href="mailto:contact@simpleafied.app">CONTACT@SIMPLEAFIED.APP</a>
-          <span class="sep">&middot;</span>
-          <span>END OF DECK</span>
-        </div>
+
+      <div class="footer-col">
+        <span class="f-title">Products</span>
+        <a href="#chapter-veritas">Veritas EQMS</a>
+        <a href="#chapter-genesis">Genesis Traceability</a>
+        <a href="#chapter-nexus">Nexus LIMS</a>
+        <a href="#platform">Platform Architecture</a>
+      </div>
+
+      <div class="footer-col">
+        <span class="f-title">Compliance</span>
+        <a href="#">EU GMP Annex 11</a>
+        <a href="#">FDA 21 CFR Part 11</a>
+        <a href="#">ISO/IEC 17025</a>
+        <a href="#">ISO 27001 Security</a>
+      </div>
+
+      <div class="footer-col">
+        <span class="f-title">Company</span>
+        <a href="#company">About Simpleafied</a>
+        <a href="#">Executive Leadership</a>
+        <a href="#">Careers</a>
+        <a href="mailto:contact@simpleafied.app">Contact Sales</a>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Demonstration Request Modal -->
+  <div class="modal-backdrop" id="demo-modal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="close-modal-btn" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <span class="meta-tag">Simpleafied Solutions</span>
+        <h3 class="modal-title">Request an Executive Demonstration</h3>
+        <p class="modal-sub">Schedule a personalized walkthrough of Veritas, Genesis, or Nexus with our European regulatory technology specialists.</p>
+      </div>
+      <form class="modal-form" id="demo-form" onsubmit="event.preventDefault(); handleFormSubmit();">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" placeholder="Dr. Elena Rostova" required>
+          </div>
+          <div class="form-group">
+            <label for="work-email">Corporate Email</label>
+            <input type="email" id="work-email" placeholder="elena.rostova@pharma.eu" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="company-name">Organization Name</label>
+            <input type="text" id="company-name" placeholder="Novartis / Roche / Biotech GmbH" required>
+          </div>
+          <div class="form-group">
+            <label for="primary-interest">Primary Area of Interest</label>
+            <select id="primary-interest" required>
+              <option value="veritas">Veritas — Enterprise Quality Management</option>
+              <option value="genesis">Genesis — Operational Traceability</option>
+              <option value="nexus">Nexus — Laboratory LIMS</option>
+              <option value="full">Full Ecosystem Platform</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="compliance-notes">Specific Regulatory Frameworks / Notes</label>
+          <textarea id="compliance-notes" rows="3" placeholder="e.g., EU GMP Annex 11 compliance, 21 CFR Part 11 e-signatures, ISO 17025 LIMS..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary-keynote btn-full">Schedule Demonstration &rarr;</button>
+      </form>
+      <div class="form-success-msg" id="form-success">
+        <span class="success-icon">&check;</span>
+        <h4>Demonstration Request Received</h4>
+        <p>A Simpleafied Compliance Specialist will contact you within 4 business hours.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Industry Detail Drawer Modal -->
+  <div class="modal-backdrop" id="industry-modal" aria-hidden="true">
+    <div class="modal-card modal-wide">
+      <button class="modal-close" id="close-ind-modal-btn" aria-label="Close modal">&times;</button>
+      <div class="ind-modal-content" id="ind-modal-body">
+        <!-- Injected dynamically via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
   <script src="index.js"></script>
 </body>
 </html>
