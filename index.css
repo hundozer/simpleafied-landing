@@ -121,6 +121,8 @@ button {
 }
 
 .brand-mark-img {
+  width: 42px;
+  height: 42px;
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
@@ -137,10 +139,11 @@ button {
 
 .brand-wordmark {
   font-family: var(--font-sans);
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--text-white);
+  line-height: 1.05;
 }
 
 .wordmark-dot {
@@ -150,10 +153,10 @@ button {
 .brand-subtext {
   font-family: var(--font-sans);
   font-size: 0.52rem;
-  font-weight: 600;
-  letter-spacing: 0.32em;
+  font-weight: 700;
+  letter-spacing: 0.38em;
   color: var(--text-muted);
-  margin-top: 3px;
+  margin-top: 4px;
   text-transform: uppercase;
 }
 
