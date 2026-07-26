@@ -247,7 +247,7 @@ button {
 
 /* Hero Experience */
 .hero-keynote {
-  padding-top: 9.5rem;
+  padding-top: 8.5rem;
   padding-bottom: 4rem;
   min-height: 100vh;
   display: flex;
@@ -259,9 +259,9 @@ button {
 
 .hero-content {
   text-align: center;
-  max-width: 900px;
+  max-width: 1200px;
   padding: 0 1.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .hero-headline {
@@ -304,7 +304,7 @@ button {
   color: var(--text-muted);
   font-weight: 400;
   max-width: 740px;
-  margin: 0 auto 2.5rem auto;
+  margin: 0 auto 2rem auto;
 }
 
 .hero-cta-group {
@@ -312,6 +312,140 @@ button {
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
+}
+
+/* Executive Product Family Showcase Cards Grid in Hero */
+.hero-product-cards-grid {
+  max-width: 1180px;
+  width: 100%;
+  margin: 3.5rem auto 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 0 0.5rem;
+  position: relative;
+  z-index: 20;
+}
+
+.hero-prod-card {
+  background: linear-gradient(145deg, rgba(10, 55, 69, 0.85) 0%, rgba(5, 37, 46, 0.95) 100%);
+  border: 1px solid rgba(131, 217, 181, 0.18);
+  border-radius: var(--radius-md);
+  padding: 1.6rem 1.4rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 16px 36px rgba(0, 20, 30, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.hero-prod-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--teal-primary), transparent);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.hero-prod-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--teal-primary);
+  box-shadow: 0 22px 50px rgba(17, 163, 142, 0.28);
+}
+
+.hero-prod-card:hover::before {
+  opacity: 1;
+  background: linear-gradient(90deg, var(--teal-primary), var(--mint-accent), var(--teal-primary));
+}
+
+.hcard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.hcard-pill {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+}
+
+.pill-v { background-color: var(--teal-primary); color: #FEFEFE; }
+.pill-g { background-color: rgba(131, 217, 181, 0.15); color: var(--mint-accent); border: 1px solid var(--border-medium); }
+.pill-n { background-color: rgba(174, 254, 226, 0.15); color: var(--mint-light); border: 1px solid var(--border-medium); }
+
+.hcard-status {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.hcard-title {
+  font-family: var(--font-sans);
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+.hcard-desc {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin-bottom: 1.25rem;
+}
+
+.hcard-metric-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.65rem 0.85rem;
+  background-color: rgba(3, 30, 38, 0.75);
+  border-radius: 6px;
+  border: 1px solid rgba(131, 217, 181, 0.12);
+  margin-bottom: 1.1rem;
+}
+
+.hcard-m-val {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--mint-accent);
+}
+
+.hcard-m-lbl {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.hcard-link {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--mint-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.hcard-link:hover {
+  color: var(--text-white);
+  gap: 0.5rem;
 }
 
 /* 3D Custom Floating Hardware Exhibition Stage */
@@ -640,52 +774,6 @@ button {
 .t-row { display: grid; grid-template-columns: 1.2fr 1fr 1fr 0.5fr; font-size: 0.68rem; padding: 0.3rem 0; border-bottom: 1px solid var(--border-subtle); }
 .t-head { font-weight: 700; color: var(--text-muted); }
 .txt-mint { color: var(--mint-accent); font-weight: 700; }
-
-/* Product Labels Navigation Strip */
-.product-labels-container {
-  max-width: 1100px;
-  margin: 3rem auto 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 0 1.5rem;
-  width: 100%;
-}
-
-.product-label-card {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 1.5rem;
-  transition: all 0.3s ease;
-}
-
-.product-label-card:hover {
-  border-color: var(--border-highlight);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-card);
-}
-
-.p-pill {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--teal-primary);
-  display: block;
-  margin-bottom: 0.4rem;
-}
-
-.p-name {
-  font-family: var(--font-sans);
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--text-white);
-  margin-bottom: 0.3rem;
-}
-
-.p-tagline { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem; }
-.p-action { font-size: 0.85rem; font-weight: 600; color: var(--mint-accent); }
 
 /* Product Sections: Experiences */
 .product-sections { padding: 6rem 0; }
@@ -1059,6 +1147,7 @@ button {
 
 /* Responsive Breakdown */
 @media (max-width: 1100px) {
+  .hero-product-cards-grid { grid-template-columns: repeat(2, 1fr); }
   .stage-3d { height: 480px; }
   .device-frame { width: 540px; height: 360px; }
   .device-center { width: 600px; height: 400px; }
@@ -1071,9 +1160,9 @@ button {
 @media (max-width: 768px) {
   .nav-menu { display: none; }
   .hero-keynote { padding-top: 7rem; }
+  .hero-product-cards-grid { grid-template-columns: 1fr; }
   .stage-3d { height: 400px; flex-direction: column; }
   .device-frame { position: relative; width: 92%; height: 280px; transform: none !important; margin-bottom: -150px; }
-  .product-labels-container { grid-template-columns: 1fr; }
   .grid-veritas, .lims-grid-view, .genealogy-graph-display { grid-template-columns: 1fr; flex-direction: column; }
   .platform-pillars, .industries-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
