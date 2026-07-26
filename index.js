@@ -1,11 +1,6 @@
 /**
- * SIMPLEAFIED 2.0 — KEYNOTE INTERACTIVITY & MOTION ENGINE
- * Features:
- * - 3D Cursor Parallax Physics for 3 Floating iPad Devices
- * - Scroll-driven rotation and sculptural expansion
- * - Live Product Screen Micro-interactions (e-Signature, Batch Trace, LIMS)
- * - Animated Ecosystem Diagram
- * - Industry Architecture Modals & Demo Request Handlers
+ * SIMPLEAFIED — PREMIUM INDUSTRIAL TECHNOLOGY INTERACTIVITY
+ * Motion Physics & Hardware Parallax
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,17 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
   initModals();
 });
 
-/* -------------------------------------------------------------
- * 1. 3D CURSOR PARALLAX ENGINE
- * ------------------------------------------------------------- */
+/* 1. 3D HARDWARE PARALLAX & REFLECTION ENGINE */
 function initCursorParallax() {
   const stage = document.getElementById('exhibition-stage');
-  const stage3d = document.getElementById('stage-3d');
-  const ipadCenter = document.getElementById('ipad-veritas');
-  const ipadLeft = document.getElementById('ipad-genesis');
-  const ipadRight = document.getElementById('ipad-nexus');
+  const deviceCenter = document.getElementById('device-veritas');
+  const deviceLeft = document.getElementById('device-genesis');
+  const deviceRight = document.getElementById('device-nexus');
 
-  if (!stage || !stage3d || !ipadCenter) return;
+  if (!stage || !deviceCenter) return;
 
   let mouseX = 0;
   let mouseY = 0;
@@ -43,24 +35,21 @@ function initCursorParallax() {
   });
 
   function renderParallax() {
-    // Smooth interpolation (lerp)
     currentX += (mouseX - currentX) * 0.08;
     currentY += (mouseY - currentY) * 0.08;
 
-    // Center iPad independent subtle tilt
+    // Dynamic 3D tilt calculations
     const centerRotX = 4 - currentY * 8;
     const centerRotY = currentX * 10;
-    ipadCenter.style.transform = `translate3d(0px, ${currentY * -12}px, 80px) rotateX(${centerRotX}deg) rotateY(${centerRotY}deg)`;
+    deviceCenter.style.transform = `translate3d(0px, ${currentY * -10}px, 80px) rotateX(${centerRotX}deg) rotateY(${centerRotY}deg)`;
 
-    // Left iPad tilt & offset
     const leftRotX = 6 - currentY * 6;
     const leftRotY = 18 + currentX * 12;
-    ipadLeft.style.transform = `translate3d(-340px, ${20 + currentY * -8}px, -40px) rotateX(${leftRotX}deg) rotateY(${leftRotY}deg)`;
+    deviceLeft.style.transform = `translate3d(-340px, ${20 + currentY * -8}px, -40px) rotateX(${leftRotX}deg) rotateY(${leftRotY}deg)`;
 
-    // Right iPad tilt & offset
     const rightRotX = 6 - currentY * 6;
     const rightRotY = -18 + currentX * 12;
-    ipadRight.style.transform = `translate3d(340px, ${20 + currentY * -8}px, -40px) rotateX(${rightRotX}deg) rotateY(${rightRotY}deg)`;
+    deviceRight.style.transform = `translate3d(340px, ${20 + currentY * -8}px, -40px) rotateX(${rightRotX}deg) rotateY(${rightRotY}deg)`;
 
     requestAnimationFrame(renderParallax);
   }
@@ -68,100 +57,87 @@ function initCursorParallax() {
   renderParallax();
 }
 
-/* -------------------------------------------------------------
- * 2. SCROLL CHOREOGRAPHY & DEVICE ROTATION
- * ------------------------------------------------------------- */
+/* 2. SCROLL CHOREOGRAPHY */
 function initScrollChoreography() {
   const header = document.getElementById('site-header');
-  const ipadLeft = document.getElementById('ipad-genesis');
-  const ipadRight = document.getElementById('ipad-nexus');
 
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
 
-    // Header background opacity on scroll
-    if (scrollY > 50) {
-      header.style.boxShadow = '0 4px 20px rgba(17, 19, 21, 0.06)';
+    if (scrollY > 40) {
+      header.style.backgroundColor = 'rgba(11, 13, 15, 0.95)';
+      header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.6)';
     } else {
+      header.style.backgroundColor = 'rgba(11, 13, 15, 0.88)';
       header.style.boxShadow = 'none';
-    }
-
-    // Gentle scroll drift for iPads in hero
-    if (scrollY < 1000 && window.innerWidth > 1100) {
-      const scrollFactor = scrollY * 0.15;
-      ipadLeft.style.marginLeft = `-${scrollFactor}px`;
-      ipadRight.style.marginRight = `-${scrollFactor}px`;
     }
   });
 }
 
-/* -------------------------------------------------------------
- * 3. LIVE PRODUCT MICRO-INTERACTIONS
- * ------------------------------------------------------------- */
+/* 3. PRODUCT MICRO-INTERACTIONS */
 function initProductMicroInteractions() {
-  // Veritas Electronic Signature Simulation
   const signBtn = document.getElementById('simulate-sign-btn');
   const auditLog = document.getElementById('audit-log-list');
+  const sigState = document.getElementById('sig-state-text');
   const auditScore = document.getElementById('audit-score-num');
 
   if (signBtn && auditLog) {
     signBtn.addEventListener('click', () => {
       signBtn.disabled = true;
-      signBtn.innerText = 'Verifying PKI Signature...';
+      signBtn.innerText = 'Validating PKI Credentials...';
       signBtn.style.opacity = '0.7';
 
       setTimeout(() => {
-        signBtn.innerText = 'Signature Authorization Recorded ✓';
+        signBtn.innerText = 'Signature Authorization Executed ✓';
         signBtn.style.backgroundColor = '#047857';
         signBtn.style.opacity = '1';
 
-        // Add log entry
+        if (sigState) {
+          sigState.innerText = 'QP Authorized (Dr. M. Weber &bull; eIDAS Validated)';
+          sigState.style.color = '#10B981';
+        }
+
         const now = new Date();
         const timeStr = now.toTimeString().split(' ')[0];
-        const newLog = document.createElement('div');
-        newLog.className = 'log-entry';
-        newLog.style.animation = 'fadeIn 0.4s ease';
-        newLog.innerHTML = `
+        const newRow = document.createElement('div');
+        newRow.className = 'log-row';
+        newRow.innerHTML = `
           <span class="log-time">${timeStr}</span>
-          <span class="log-txt" style="color:#059669; font-weight:700;">QP Release Signed: Dr. M. Weber (eIDAS Validated)</span>
+          <span class="log-desc" style="color:#10B981; font-weight:700;">QP Signature Executed: PKI Certified (EU Annex 11)</span>
         `;
-        auditLog.prepend(newLog);
+        auditLog.prepend(newRow);
 
         if (auditScore) {
           auditScore.innerText = '99.4';
         }
-      }, 1000);
+      }, 900);
     });
   }
 }
 
-/* -------------------------------------------------------------
- * 4. ECOSYSTEM DIAGRAM INTERACTIVITY
- * ------------------------------------------------------------- */
+/* 4. ECOSYSTEM DIAGRAM INTERACTIVITY */
 function initEcosystemDiagram() {
-  const nodes = document.querySelectorAll('.node-product');
-  const connLines = document.querySelectorAll('.conn-line');
+  const nodes = document.querySelectorAll('.net-node');
+  const lines = document.querySelectorAll('.net-line');
 
   nodes.forEach((node) => {
     node.addEventListener('mouseenter', () => {
-      connLines.forEach(line => line.style.stroke = '#059669');
+      lines.forEach(l => l.style.stroke = '#059669');
     });
 
     node.addEventListener('mouseleave', () => {
-      connLines.forEach(line => line.style.stroke = '#111315');
+      lines.forEach(l => l.style.stroke = '#E2E8F0');
     });
   });
 }
 
-/* -------------------------------------------------------------
- * 5. MODAL HANDLERS & INDUSTRY DATA
- * ------------------------------------------------------------- */
+/* 5. MODALS & INDUSTRY DRAWERS */
 const INDUSTRY_DETAILS = {
   'life-sciences': {
-    title: 'Life Sciences Regulatory Architecture',
-    subtitle: 'EU MDR & GxP Compliance Infrastructure',
+    title: 'Life Sciences Software Infrastructure',
+    subtitle: 'EU MDR & GxP Quality System Architecture',
     points: [
-      'Automated ISO 13485 design history file (DHF) compilation.',
+      'Automated ISO 13485 Design History File (DHF) compilation.',
       'Validated 21 CFR Part 11 electronic signature workflows.',
       'Real-time supplier quality auditing and CAPA linking.',
       'EU EUDAMED medical device database integration ready.'
@@ -169,7 +145,7 @@ const INDUSTRY_DETAILS = {
   },
   'biotech': {
     title: 'Biotechnology & Advanced Therapeutics',
-    subtitle: 'Cell & Gene Therapy (ATMP) Traceability',
+    subtitle: 'Cell & Gene Therapy (ATMP) Traceability Platform',
     points: [
       'Chain of identity (COI) and chain of custody (COC) tracking.',
       'Cold-chain temperature telemetry monitoring down to -196°C.',
@@ -220,7 +196,6 @@ const INDUSTRY_DETAILS = {
 };
 
 function initModals() {
-  // Demo Modal Triggers
   const demoModal = document.getElementById('demo-modal');
   const demoBtns = [
     document.getElementById('open-demo-btn'),
@@ -245,7 +220,6 @@ function initModals() {
     });
   }
 
-  // Close modal when clicking backdrop
   demoModal.addEventListener('click', (e) => {
     if (e.target === demoModal) {
       demoModal.classList.remove('active');
@@ -253,11 +227,11 @@ function initModals() {
     }
   });
 
-  // Industry Detail Modal Triggers
+  // Industry Modal Handler
   const indModal = document.getElementById('industry-modal');
   const indModalBody = document.getElementById('ind-modal-body');
   const closeIndModalBtn = document.getElementById('close-ind-modal-btn');
-  const industryTiles = document.querySelectorAll('.industry-tile');
+  const industryTiles = document.querySelectorAll('.ind-card');
 
   industryTiles.forEach((tile) => {
     tile.addEventListener('click', () => {
@@ -266,22 +240,22 @@ function initModals() {
 
       if (data && indModalBody) {
         indModalBody.innerHTML = `
-          <div class="meta-tag">Industry Focus</div>
+          <div class="meta-tag-tech">INDUSTRY SPECIFICATION</div>
           <h3 class="modal-title">${data.title}</h3>
           <p class="modal-sub">${data.subtitle}</p>
           <div style="margin: 1.5rem 0;">
-            <h4 style="font-size: 0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-muted); margin-bottom:1rem;">Architecture Highlights</h4>
+            <h4 style="font-family:var(--font-mono); font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted); margin-bottom:1rem;">System Highlights</h4>
             <ul style="list-style:none; display:flex; flex-direction:column; gap:0.8rem;">
               ${data.points.map(pt => `
-                <li style="display:flex; align-items:flex-start; gap:0.6rem; font-size:0.95rem; color:var(--text-secondary);">
-                  <span style="color:var(--emerald-muted); font-weight:700;">✓</span>
+                <li style="display:flex; align-items:flex-start; gap:0.6rem; font-size:0.92rem; color:var(--text-primary);">
+                  <span style="color:var(--emerald-accent); font-weight:700;">✓</span>
                   <span>${pt}</span>
                 </li>
               `).join('')}
             </ul>
           </div>
           <div style="margin-top:2rem; display:flex; gap:1rem;">
-            <button class="btn btn-primary-keynote" onclick="document.getElementById('industry-modal').classList.remove('active'); document.getElementById('demo-modal').classList.add('active');">Request Industry Demo &rarr;</button>
+            <button class="btn btn-primary-tech" onclick="document.getElementById('industry-modal').classList.remove('active'); document.getElementById('demo-modal').classList.add('active');">Schedule Industry Demo &rarr;</button>
           </div>
         `;
         indModal.classList.add('active');
@@ -302,7 +276,6 @@ function initModals() {
   });
 }
 
-// Global Demo Form Handler
 function handleFormSubmit() {
   const form = document.getElementById('demo-form');
   const successMsg = document.getElementById('form-success');
