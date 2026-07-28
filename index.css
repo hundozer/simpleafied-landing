@@ -1087,18 +1087,102 @@ button {
   font-size: 1.15rem;
   color: var(--text-muted);
   max-width: 760px;
-  margin: 0 auto 3rem auto;
+  margin: 0 auto 3.5rem auto;
 }
 
-.network-diagram-container { width: 100%; max-width: 960px; margin: 0 auto; overflow-x: auto; }
-.network-svg { width: 100%; height: auto; min-width: 600px; }
+/* FUTURISTIC INDUSTRIAL COMMAND MATRIX STYLING */
+.network-diagram-container {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  overflow-x: auto;
+  position: relative;
+}
 
-.net-line { stroke: var(--border-medium); stroke-width: 2; }
-.line-active { stroke: var(--text-white); }
-.net-line-sub { stroke: var(--border-subtle); stroke-dasharray: 4 4; }
+.cyber-matrix-svg {
+  width: 100%;
+  height: auto;
+  min-width: 760px;
+  display: block;
+}
 
-.net-node { cursor: pointer; transition: transform 0.3s ease; }
-.net-node:hover { transform: scale(1.05); }
+.spin-orbit-outer {
+  transform-origin: 500px 290px;
+  animation: spinOrbit 35s linear infinite;
+}
+
+.spin-orbit-inner {
+  transform-origin: 500px 290px;
+  animation: spinOrbit 20s linear infinite reverse;
+}
+
+@keyframes spinOrbit {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.laser-beam {
+  stroke-dasharray: 8 6;
+  animation: laserFlow 2.5s linear infinite;
+}
+
+.beam-genesis { animation-duration: 3s; }
+.beam-nexus { animation-duration: 2.2s; }
+
+@keyframes laserFlow {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -28; }
+}
+
+.pulse-line {
+  stroke-dasharray: 4 4;
+  animation: pulseDash 3s linear infinite;
+}
+
+@keyframes pulseDash {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 16; }
+}
+
+.pulse-dot {
+  animation: pulseDotFade 1.6s ease-in-out infinite alternate;
+}
+
+@keyframes pulseDotFade {
+  0% { opacity: 0.3; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1.4); }
+}
+
+.matrix-node {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.node-product {
+  cursor: pointer;
+}
+
+.gate-rect {
+  transition: all 0.3s ease;
+}
+
+.node-product:hover .gate-rect {
+  stroke: var(--mint-light);
+  fill: #062B35;
+  filter: drop-shadow(0 0 12px rgba(17, 163, 142, 0.6));
+}
+
+.node-product:hover {
+  transform: scale(1.04);
+}
+
+.node-stream rect {
+  transition: border 0.3s ease, fill 0.3s ease;
+}
+
+.node-stream:hover rect {
+  fill: #0A3745;
+  stroke: var(--mint-light);
+}
 
 .platform-pillars {
   display: grid;

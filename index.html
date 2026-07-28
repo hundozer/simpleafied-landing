@@ -591,68 +591,122 @@
       <span class="meta-tag-brand text-center">PLATFORM ARCHITECTURE</span>
       <h2 class="platform-headline text-center">Everything connected. Everything accountable.</h2>
       <p class="platform-subhead text-center">
-        Simpleafied Intelligence operates as a unified compliance graph layer linking regulations, operational processes, master documents, personnel, samples, products, and evidence.
+        Simpleafied Intelligence operates as a unified compliance graph engine linking regulations, operational processes, master documents, personnel, samples, products, and evidence.
       </p>
 
-      <!-- Animated Industrial Node Network -->
-      <div class="network-diagram-container">
-        <svg class="network-svg" id="platform-svg" viewBox="0 0 1000 520" preserveAspectRatio="xMidYMid meet">
-          <!-- Outer Orbit Circle -->
-          <circle cx="500" cy="260" r="210" stroke="#0E4352" stroke-width="1.5" stroke-dasharray="6 6" fill="none"/>
+      <!-- Futuristic Industrial Command Matrix -->
+      <div class="network-diagram-container" id="platform-matrix-container">
+        <svg class="network-svg cyber-matrix-svg" id="platform-svg" viewBox="0 0 1000 580" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <!-- Glowing Laser Gradients -->
+            <linearGradient id="laserTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#11A38E" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#83D9B5" stop-opacity="1"/>
+            </linearGradient>
+            <linearGradient id="laserMint" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#83D9B5" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#AEFEE2" stop-opacity="0.9"/>
+            </linearGradient>
+            
+            <!-- Glow Filters -->
+            <filter id="coreGlow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+            
+            <filter id="cardGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
 
-          <!-- Core Lines -->
-          <line x1="500" y1="260" x2="500" y2="70" class="net-line line-active"/>
-          <line x1="500" y1="260" x2="260" y2="400" class="net-line line-active"/>
-          <line x1="500" y1="260" x2="740" y2="400" class="net-line line-active"/>
+          <!-- Background Cybernetic Orbits -->
+          <circle cx="500" cy="290" r="230" stroke="rgba(131, 217, 181, 0.14)" stroke-width="1.5" stroke-dasharray="4 8" fill="none" class="spin-orbit-outer"/>
+          <circle cx="500" cy="290" r="160" stroke="rgba(17, 163, 142, 0.22)" stroke-width="1" stroke-dasharray="12 12" fill="none" class="spin-orbit-inner"/>
 
-          <!-- Sub Lines -->
-          <line x1="500" y1="260" x2="290" y2="260" class="net-line-sub"/>
-          <line x1="500" y1="260" x2="710" y2="260" class="net-line-sub"/>
-          <line x1="500" y1="260" x2="370" y2="130" class="net-line-sub"/>
-          <line x1="500" y1="260" x2="630" y2="130" class="net-line-sub"/>
+          <!-- Laser Stream Beams to Product Gateways -->
+          <path d="M 500 290 L 500 120" stroke="url(#laserTeal)" stroke-width="3" fill="none" class="laser-beam beam-veritas" filter="url(#coreGlow)"/>
+          <path d="M 500 290 L 210 440" stroke="url(#laserMint)" stroke-width="3" fill="none" class="laser-beam beam-genesis" filter="url(#coreGlow)"/>
+          <path d="M 500 290 L 790 440" stroke="url(#laserTeal)" stroke-width="3" fill="none" class="laser-beam beam-nexus" filter="url(#coreGlow)"/>
 
-          <!-- Center Node: Simpleafied Intelligence -->
-          <g class="net-node node-center" transform="translate(500, 260)">
-            <circle r="68" fill="#05252E" stroke="#11A38E" stroke-width="2.5"/>
-            <text y="-8" text-anchor="middle" fill="#FEFEFE" font-family="Urbanist" font-size="16" font-weight="700" letter-spacing="1">SIMPLEAFIED</text>
-            <text y="14" text-anchor="middle" fill="#83D9B5" font-family="Sometype Mono" font-size="10" font-weight="600" letter-spacing="1.5">INTELLIGENCE</text>
+          <!-- Laser Stream Beams to Data Stream Capsules -->
+          <path d="M 500 290 L 330 170" stroke="rgba(131, 217, 181, 0.35)" stroke-width="1.5" stroke-dasharray="4 4" fill="none" class="pulse-line"/>
+          <path d="M 500 290 L 670 170" stroke="rgba(131, 217, 181, 0.35)" stroke-width="1.5" stroke-dasharray="4 4" fill="none" class="pulse-line"/>
+          <path d="M 500 290 L 230 290" stroke="rgba(131, 217, 181, 0.35)" stroke-width="1.5" stroke-dasharray="4 4" fill="none" class="pulse-line"/>
+          <path d="M 500 290 L 770 290" stroke="rgba(131, 217, 181, 0.35)" stroke-width="1.5" stroke-dasharray="4 4" fill="none" class="pulse-line"/>
+
+          <!-- Center Engine Node: SIMPLEAFIED INTELLIGENCE OS -->
+          <g class="matrix-node node-core" transform="translate(500, 290)">
+            <circle r="80" fill="url(#coreGlow)" opacity="0.15"/>
+            <circle r="72" fill="#031E26" stroke="#11A38E" stroke-width="2.5" filter="url(#coreGlow)"/>
+            <circle r="60" fill="#05252E" stroke="rgba(131, 217, 181, 0.3)" stroke-width="1.5"/>
+            <text y="-14" text-anchor="middle" fill="#FEFEFE" font-family="Urbanist" font-size="16" font-weight="800" letter-spacing="1.5">SIMPLEAFIED</text>
+            <text y="6" text-anchor="middle" fill="#83D9B5" font-family="Sometype Mono" font-size="10" font-weight="700" letter-spacing="2">INTELLIGENCE</text>
+            <text y="22" text-anchor="middle" fill="#A3C2CA" font-family="Sometype Mono" font-size="8" font-weight="600" letter-spacing="1">GRAPH ENGINE OS</text>
+            <circle cx="0" cy="38" r="3" fill="#83D9B5" class="pulse-dot"/>
           </g>
 
-          <!-- Product Nodes -->
-          <g class="net-node node-prod" transform="translate(500, 70)">
-            <rect x="-85" y="-32" width="170" height="64" rx="8" fill="#0A3745" stroke="#FEFEFE" stroke-width="1.5"/>
-            <text y="-4" text-anchor="middle" fill="#FEFEFE" font-family="Urbanist" font-size="15" font-weight="700">VERITAS</text>
-            <text y="14" text-anchor="middle" fill="#A3C2CA" font-family="Urbanist" font-size="11">Intelligent EQMS</text>
+          <!-- Top Product Node: VERITAS -->
+          <g class="matrix-node node-product node-veritas-gate" transform="translate(500, 75)">
+            <a href="https://veritas.simpleafied.eu" target="_blank" rel="noopener">
+              <rect x="-140" y="-42" width="280" height="84" rx="10" fill="#0A3745" stroke="#11A38E" stroke-width="2" class="gate-rect" filter="url(#cardGlow)"/>
+              <rect x="-128" y="-32" width="94" height="20" rx="3" fill="#11A38E"/>
+              <text x="-81" y="-18" text-anchor="middle" fill="#FEFEFE" font-family="Sometype Mono" font-size="8.5" font-weight="700">21 CFR PART 11</text>
+              <text x="120" y="-18" text-anchor="end" fill="#83D9B5" font-family="Sometype Mono" font-size="9" font-weight="700">OPEN APP ↗</text>
+              <text x="-128" y="10" fill="#FEFEFE" font-family="Urbanist" font-size="17" font-weight="800">VERITAS • EQMS</text>
+              <text x="-128" y="28" fill="#A3C2CA" font-family="Urbanist" font-size="11.5" font-weight="500">Intelligent Quality Management System</text>
+            </a>
           </g>
 
-          <g class="net-node node-prod" transform="translate(260, 400)">
-            <rect x="-85" y="-32" width="170" height="64" rx="8" fill="#0A3745" stroke="#FEFEFE" stroke-width="1.5"/>
-            <text y="-4" text-anchor="middle" fill="#FEFEFE" font-family="Urbanist" font-size="15" font-weight="700">GENESIS</text>
-            <text y="14" text-anchor="middle" fill="#A3C2CA" font-family="Urbanist" font-size="11">Production Traceability</text>
+          <!-- Bottom Left Product Node: GENESIS -->
+          <g class="matrix-node node-product node-genesis-gate" transform="translate(210, 480)">
+            <a href="https://genesis.simpleafied.eu" target="_blank" rel="noopener">
+              <rect x="-140" y="-42" width="280" height="84" rx="10" fill="#0A3745" stroke="#83D9B5" stroke-width="2" class="gate-rect" filter="url(#cardGlow)"/>
+              <rect x="-128" y="-32" width="86" height="20" rx="3" fill="rgba(131, 217, 181, 0.2)" stroke="#83D9B5" stroke-width="1"/>
+              <text x="-85" y="-18" text-anchor="middle" fill="#83D9B5" font-family="Sometype Mono" font-size="8.5" font-weight="700">EU ANNEX 11</text>
+              <text x="120" y="-18" text-anchor="end" fill="#83D9B5" font-family="Sometype Mono" font-size="9" font-weight="700">OPEN APP ↗</text>
+              <text x="-128" y="10" fill="#FEFEFE" font-family="Urbanist" font-size="17" font-weight="800">GENESIS • TRACEABILITY</text>
+              <text x="-128" y="28" fill="#A3C2CA" font-family="Urbanist" font-size="11.5" font-weight="500">Production Lineage &amp; Supply Chain</text>
+            </a>
           </g>
 
-          <g class="net-node node-prod" transform="translate(740, 400)">
-            <rect x="-85" y="-32" width="170" height="64" rx="8" fill="#0A3745" stroke="#FEFEFE" stroke-width="1.5"/>
-            <text y="-4" text-anchor="middle" fill="#FEFEFE" font-family="Urbanist" font-size="15" font-weight="700">NEXUS</text>
-            <text y="14" text-anchor="middle" fill="#A3C2CA" font-family="Urbanist" font-size="11">Laboratory LIMS</text>
+          <!-- Bottom Right Product Node: NEXUS -->
+          <g class="matrix-node node-product node-nexus-gate" transform="translate(790, 480)">
+            <a href="https://nexus.simpleafied.eu" target="_blank" rel="noopener">
+              <rect x="-140" y="-42" width="280" height="84" rx="10" fill="#0A3745" stroke="#AEFEE2" stroke-width="2" class="gate-rect" filter="url(#cardGlow)"/>
+              <rect x="-128" y="-32" width="94" height="20" rx="3" fill="rgba(174, 254, 226, 0.2)" stroke="#AEFEE2" stroke-width="1"/>
+              <text x="-81" y="-18" text-anchor="middle" fill="#AEFEE2" font-family="Sometype Mono" font-size="8.5" font-weight="700">ISO/IEC 17025</text>
+              <text x="120" y="-18" text-anchor="end" fill="#AEFEE2" font-family="Sometype Mono" font-size="9" font-weight="700">OPEN APP ↗</text>
+              <text x="-128" y="10" fill="#FEFEFE" font-family="Urbanist" font-size="17" font-weight="800">NEXUS • LIMS</text>
+              <text x="-128" y="28" fill="#A3C2CA" font-family="Urbanist" font-size="11.5" font-weight="500">Laboratory Information &amp; Telemetry</text>
+            </a>
           </g>
 
-          <!-- Graph Capability Nodes -->
-          <g class="net-node node-sub" transform="translate(290, 260)">
-            <circle r="24" fill="#0A3745" stroke="#83D9B5" stroke-width="1"/>
-            <text y="4" text-anchor="middle" fill="#FEFEFE" font-family="Urbanist" font-size="10" font-weight="600">Regulations</text>
+          <!-- Data Stream Capsules (Wider Capsules so ZERO text overflow!) -->
+          <g class="matrix-node node-stream" transform="translate(330, 170)">
+            <rect x="-85" y="-18" width="170" height="36" rx="18" fill="#05252E" stroke="#83D9B5" stroke-width="1.2"/>
+            <text y="5" text-anchor="middle" fill="#FEFEFE" font-family="Urbanist" font-size="12" font-weight="700">⚡ Operational Processes</text>
           </g>
-          <g class="net-node node-sub" transform="translate(710, 260)">
-            <circle r="24" fill="#0A3745" stroke="#83D9B5" stroke-width="1"/>
-            <text y="4" text-anchor="middle" fill="#FEFEFE" font-family="Urbanist" font-size="10" font-weight="600">Evidence</text>
+
+          <g class="matrix-node node-stream" transform="translate(670, 170)">
+            <rect x="-85" y="-18" width="170" height="36" rx="18" fill="#05252E" stroke="#83D9B5" stroke-width="1.2"/>
+            <text y="5" text-anchor="middle" fill="#FEFEFE" font-family="Urbanist" font-size="12" font-weight="700">🧪 Lab Telemetry &amp; Samples</text>
           </g>
-          <g class="net-node node-sub" transform="translate(370, 130)">
-            <circle r="24" fill="#0A3745" stroke="#83D9B5" stroke-width="1"/>
-            <text y="4" text-anchor="middle" fill="#FEFEFE" font-family="Urbanist" font-size="10" font-weight="600">Processes</text>
+
+          <g class="matrix-node node-stream" transform="translate(230, 290)">
+            <rect x="-95" y="-18" width="190" height="36" rx="18" fill="#05252E" stroke="#83D9B5" stroke-width="1.2"/>
+            <text y="5" text-anchor="middle" fill="#FEFEFE" font-family="Urbanist" font-size="12" font-weight="700">📜 Regulations &amp; Mandates</text>
           </g>
-          <g class="net-node node-sub" transform="translate(630, 130)">
-            <circle r="24" fill="#0A3745" stroke="#83D9B5" stroke-width="1"/>
-            <text y="4" text-anchor="middle" fill="#FEFEFE" font-family="Urbanist" font-size="10" font-weight="600">Samples</text>
+
+          <g class="matrix-node node-stream" transform="translate(770, 290)">
+            <rect x="-95" y="-18" width="190" height="36" rx="18" fill="#05252E" stroke="#83D9B5" stroke-width="1.2"/>
+            <text y="5" text-anchor="middle" fill="#FEFEFE" font-family="Urbanist" font-size="12" font-weight="700">🔒 Cryptographic Evidence</text>
           </g>
         </svg>
       </div>
