@@ -13,172 +13,255 @@
   <meta property="og:image" content="https://www.simpleafied.eu/og-image.png">
   <meta property="og:site_name" content="Simpleafied">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#151515">
+  <meta name="theme-color" content="#0A0B0A">
 
   <link rel="icon" type="image/svg+xml" href="mark-lime.svg">
   <link rel="apple-touch-icon" href="brand_logo_master.png">
+  <link rel="preload" href="fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/inter-tight-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
 </head>
 <body>
+  <div class="grain" aria-hidden="true"></div>
 
-  <header class="top">
-    <div class="wrap top-inner">
-      <a href="#" class="lockup" aria-label="Simpleafied home">
-        <img src="mark-lime.svg" width="36" height="36" alt="">
+  <header class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="lockup" aria-label="Simpleafied home">
+        <img src="mark-lime.svg" width="30" height="30" alt="">
         <span class="wordmark">simpleafied<span class="dot">.</span></span>
       </a>
-      <nav class="nav" aria-label="Main">
+      <nav class="nav-links" aria-label="Main">
         <a href="#products">Products</a>
         <a href="#connected">How it connects</a>
+        <a href="#principles">Principles</a>
         <a href="#who">Who it is for</a>
       </nav>
-      <a class="btn btn-outline-dark" href="mailto:contact@simpleafied.app">Contact us</a>
+      <a class="btn btn-ghost" href="mailto:contact@simpleafied.app">Contact us</a>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-text">
-        <p class="kicker">Software for regulated production</p>
-        <h1>Every batch, with its evidence.</h1>
-        <p class="lede">Simpleafied connects cultivation, laboratory and quality records for regulated producers. Three products that work alone, and work better together.</p>
-        <div class="actions">
-          <a class="btn btn-lime" href="mailto:contact@simpleafied.app?subject=Pilot%20customer">Become a pilot customer</a>
-          <a class="btn btn-outline-dark" href="#products">See the products</a>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="gridlines" aria-hidden="true"></div>
+
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal"><span class="pulse"></span>Software for regulated production</p>
+          <h1 class="display reveal" style="--d:1">Every batch,<br>with its <em>evidence.</em></h1>
+          <p class="lede reveal" style="--d:2">Simpleafied connects cultivation, laboratory and quality records for regulated producers. Three products that work alone, and work better together.</p>
+          <div class="actions reveal" style="--d:3">
+            <a class="btn btn-lime" href="mailto:contact@simpleafied.app?subject=Pilot%20customer">Become a pilot customer <span class="arrow">→</span></a>
+            <a class="btn btn-ghost" href="#products">See the products</a>
+          </div>
+        </div>
+
+        <div class="stage reveal" style="--d:2" id="stage" aria-label="Illustration of a batch release view with sample data" role="img">
+          <div class="stack">
+            <div class="sheet sheet-back">
+              <div class="sheet-bar"><span class="mono">GENESIS</span><span class="mono dim">LOT HL-0412</span></div>
+              <div class="lineage">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </div>
+            <div class="sheet sheet-mid">
+              <div class="sheet-bar"><span class="mono">NEXUS</span><span class="mono dim">CoA · 24-1187</span></div>
+              <div class="bars"><i style="--h:62%"></i><i style="--h:38%"></i><i style="--h:81%"></i><i style="--h:24%"></i><i style="--h:55%"></i></div>
+            </div>
+            <div class="sheet sheet-front">
+              <div class="sheet-head">
+                <div>
+                  <p class="mono dim">VERITAS · RELEASE VIEW</p>
+                  <p class="sheet-title">Harvest lot HL-0412</p>
+                </div>
+                <span class="chip mono">MARKET: DE</span>
+              </div>
+              <ul class="checks">
+                <li><span>Harvest lot and facility licence</span><span class="stamp ok">SATISFIED</span></li>
+                <li><span>Heavy metals within German limits</span><span class="stamp ok">SATISFIED</span></li>
+                <li><span>External CoA values verified by QC</span><span class="stamp review">REVIEW</span></li>
+                <li><span>Microbial result for this lot</span><span class="stamp missing">MISSING</span></li>
+                <li><span>Open deviation on the drying room</span><span class="stamp block">BLOCKED</span></li>
+              </ul>
+              <div class="sheet-foot">
+                <span class="mono dim">Illustration with sample data</span>
+                <span class="sign mono">QP DECIDES AND SIGNS</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <figure class="sheet" aria-label="Illustration of a batch release view with sample data">
-        <div class="sheet-head">
-          <span class="sheet-title">Harvest lot HL-0412</span>
-          <span class="mono muted">Market: Germany</span>
+      <a href="#products" class="scroll-cue" aria-label="Scroll to products"><span></span></a>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Controlled documents</span><b>✦</b><span>Training records</span><b>✦</b><span>Change control</span><b>✦</b><span>Deviations and CAPA</span><b>✦</b><span>Mother plants and clones</span><b>✦</b><span>Harvest lots</span><b>✦</b><span>Recalls</span><b>✦</b><span>Test orders</span><b>✦</b><span>Certificates of analysis</span><b>✦</b><span>QR verification</span><b>✦</b><span>Market limits</span><b>✦</b><span>Electronic signatures</span><b>✦</b><span>Audit trail</span><b>✦</b>
+        <span>Controlled documents</span><b>✦</b><span>Training records</span><b>✦</b><span>Change control</span><b>✦</b><span>Deviations and CAPA</span><b>✦</b><span>Mother plants and clones</span><b>✦</b><span>Harvest lots</span><b>✦</b><span>Recalls</span><b>✦</b><span>Test orders</span><b>✦</b><span>Certificates of analysis</span><b>✦</b><span>QR verification</span><b>✦</b><span>Market limits</span><b>✦</b><span>Electronic signatures</span><b>✦</b><span>Audit trail</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- PRODUCTS -->
+    <section class="section" id="products">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow reveal">01 — Products</p>
+          <h2 class="title reveal" style="--d:1">Three products.<br><em>Each for its own industry.</em></h2>
         </div>
-        <ul class="checks">
-          <li><span>Harvest lot and facility licence</span><span class="stamp ok">SATISFIED</span></li>
-          <li><span>Heavy metals within German limits</span><span class="stamp ok">SATISFIED</span></li>
-          <li><span>External CoA values verified by QC</span><span class="stamp">REVIEW</span></li>
-          <li><span>Microbial result for this lot</span><span class="stamp dash">MISSING</span></li>
-          <li><span>Open deviation on the drying room</span><span class="stamp block">BLOCKED</span></li>
-        </ul>
-        <figcaption class="muted">Illustration with sample data. The QP decides and signs.</figcaption>
-      </figure>
-    </div>
-  </section>
 
-  <section class="band" id="products">
-    <div class="wrap">
-      <p class="kicker">Products</p>
-      <h2>Three products, each for its own industry.</h2>
-      <div class="cards three">
-        <article class="card">
-          <p class="tag">Veritas</p>
-          <h3>Quality management</h3>
-          <p>For QA teams at biotech companies, CROs and GMP manufacturers of 10–100 people.</p>
-          <ul class="list">
-            <li>Controlled documents with review, approval and release</li>
-            <li>Training with read-and-understood signatures</li>
-            <li>Change control, deviations and CAPA</li>
-            <li>Equipment calibration and QP certification</li>
-          </ul>
-          <a class="signin" href="https://veritas.simpleafied.eu" rel="noopener">Sign in to Veritas ↗</a>
-        </article>
-        <article class="card">
-          <p class="tag">Genesis</p>
-          <h3>Cultivation and traceability</h3>
-          <p>For licensed growers who must prove where every lot came from.</p>
-          <ul class="list">
-            <li>Mother plants, clones, flowering and drying</li>
-            <li>Plant batches and harvest lots</li>
-            <li>Rooms, equipment and observations</li>
-            <li>Destruction, recalls and lot release</li>
-          </ul>
-          <a class="signin" href="https://genesis.simpleafied.eu" rel="noopener">Sign in to Genesis ↗</a>
-        </article>
-        <article class="card">
-          <p class="tag">Nexus</p>
-          <h3>Laboratory and LIMS</h3>
-          <p>For testing laboratories, and the clients who order tests from them.</p>
-          <ul class="list">
-            <li>Online test orders and sample tracking</li>
-            <li>Results, out-of-spec checks and certificates of analysis</li>
-            <li>Certificates anyone can check by QR code</li>
-            <li>Results read against each export market’s limits</li>
-          </ul>
-          <a class="signin" href="https://nexus.simpleafied.eu" rel="noopener">Sign in to Nexus ↗</a>
-        </article>
-      </div>
-    </div>
-  </section>
+        <div class="bento">
+          <article class="card reveal" style="--d:1">
+            <div class="card-art art-veritas" aria-hidden="true">
+              <div class="doc d1"></div><div class="doc d2"></div>
+              <div class="doc d3"><i></i><i></i><i></i><i></i><svg viewBox="0 0 120 40"><path d="M4 30 C 18 4, 26 36, 40 18 S 62 8, 70 24 S 96 30, 116 10"/></svg></div>
+            </div>
+            <p class="tag mono">VERITAS</p>
+            <h3>Quality management</h3>
+            <p class="muted">For QA teams at biotech companies, CROs and GMP manufacturers of 10–100 people.</p>
+            <ul class="feat">
+              <li>Controlled documents with review, approval and release</li>
+              <li>Training with read-and-understood signatures</li>
+              <li>Change control, deviations and CAPA</li>
+              <li>Equipment calibration and QP certification</li>
+            </ul>
+            <a class="signin" href="https://veritas.simpleafied.eu" rel="noopener">Sign in to Veritas <span>↗</span></a>
+          </article>
 
-  <section class="band alt" id="connected">
-    <div class="wrap">
-      <p class="kicker">How it connects</p>
-      <h2>Connected, they answer one question: can this batch ship?</h2>
-      <ol class="chain">
-        <li><span class="tag">Genesis</span><strong>Grown</strong><span>Which plants, rooms and harvest lot</span></li>
-        <li><span class="tag">Nexus</span><strong>Tested</strong><span>Results and certificates for that lot</span></li>
-        <li><span class="tag">Veritas</span><strong>Checked</strong><span>Open deviations, CAPAs and changes</span></li>
-        <li><span class="tag">Rules</span><strong>Judged</strong><span>Within the target market’s limits?</span></li>
-        <li class="last"><span class="tag">Release</span><strong>Decided</strong><span>The QP sees what blocks it, and signs</span></li>
-      </ol>
-      <p class="note">We are building the connected release view with our first pilot customers, starting with medical-cannabis producers supplying Germany.</p>
-    </div>
-  </section>
+          <article class="card reveal" style="--d:2">
+            <div class="card-art art-genesis" aria-hidden="true">
+              <svg viewBox="0 0 240 150">
+                <g class="tree">
+                  <path d="M120 140 V96"/><path d="M120 96 C120 70, 70 76, 64 50"/><path d="M120 96 C120 70, 176 76, 182 50"/><path d="M120 96 V44"/>
+                  <path d="M64 50 C60 34, 40 34, 34 20"/><path d="M64 50 C66 34, 84 32, 90 18"/><path d="M182 50 C178 34, 160 32, 154 18"/><path d="M182 50 C186 34, 204 34, 210 20"/><path d="M120 44 V16"/>
+                </g>
+                <g class="nodes">
+                  <circle cx="120" cy="140" r="6"/><circle cx="120" cy="96" r="5"/><circle cx="64" cy="50" r="5"/><circle cx="182" cy="50" r="5"/><circle cx="120" cy="44" r="5"/>
+                  <circle cx="34" cy="20" r="4"/><circle cx="90" cy="18" r="4"/><circle cx="154" cy="18" r="4"/><circle cx="210" cy="20" r="4"/><circle cx="120" cy="16" r="4"/>
+                </g>
+              </svg>
+            </div>
+            <p class="tag mono">GENESIS</p>
+            <h3>Cultivation and traceability</h3>
+            <p class="muted">For licensed growers who must prove where every lot came from.</p>
+            <ul class="feat">
+              <li>Mother plants, clones, flowering and drying</li>
+              <li>Plant batches and harvest lots</li>
+              <li>Rooms, equipment and observations</li>
+              <li>Destruction, recalls and lot release</li>
+            </ul>
+            <a class="signin" href="https://genesis.simpleafied.eu" rel="noopener">Sign in to Genesis <span>↗</span></a>
+          </article>
 
-  <section class="band">
-    <div class="wrap">
-      <p class="kicker">How we work</p>
-      <h2>Built for people who answer to an inspector.</h2>
-      <div class="cards four">
-        <div class="plain"><h3>A person decides</h3><p>The software flags and explains. Qualified people approve, release and sign.</p></div>
-        <div class="plain"><h3>Every result explains itself</h3><p>Each check shows the rule, the limit and the record behind it. No unexplained scores.</p></div>
-        <div class="plain"><h3>Every action leaves a trail</h3><p>Electronic signatures need a fresh sign-in, and the audit trail cannot be edited.</p></div>
-        <div class="plain"><h3>Built around the rules</h3><p>Designed around EU GMP Annex 11 and 21 CFR Part 11. You validate for your intended use; we support it with documents.</p></div>
+          <article class="card reveal" style="--d:3">
+            <div class="card-art art-nexus" aria-hidden="true">
+              <div class="coa">
+                <div class="coa-lines"><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="qr">
+                  <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                </div>
+              </div>
+              <div class="scan"></div>
+            </div>
+            <p class="tag mono">NEXUS</p>
+            <h3>Laboratory and LIMS</h3>
+            <p class="muted">For testing laboratories, and the clients who order tests from them.</p>
+            <ul class="feat">
+              <li>Online test orders and sample tracking</li>
+              <li>Results, out-of-spec checks and certificates of analysis</li>
+              <li>Certificates anyone can check by QR code</li>
+              <li>Results read against each export market’s limits</li>
+            </ul>
+            <a class="signin" href="https://nexus.simpleafied.eu" rel="noopener">Sign in to Nexus <span>↗</span></a>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="band alt" id="who">
-    <div class="wrap">
-      <p class="kicker">Who it is for</p>
-      <h2>Three kinds of customer, often linked to each other.</h2>
-      <div class="cards three">
-        <div class="plain"><h3>Growers and producers</h3><p>Licensed medical-cannabis cultivators and GMP manufacturers, many exporting to Germany.</p></div>
-        <div class="plain"><h3>Testing laboratories</h3><p>Labs that test samples and issue certificates, and the producers who order from them.</p></div>
-        <div class="plain"><h3>Life-sciences QA teams</h3><p>Biotech companies, CROs and GMP manufacturers with a small quality team.</p></div>
-      </div>
-    </div>
-  </section>
+    <!-- CHAIN -->
+    <section class="section chain-section" id="connected">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow reveal">02 — How it connects</p>
+          <h2 class="title reveal" style="--d:1">Connected, they answer one question:<br><em>can this batch ship?</em></h2>
+        </div>
 
-  <section class="cta">
-    <div class="wrap cta-inner">
-      <div>
-        <h2>We are looking for our first pilot customers.</h2>
-        <p class="lede">Show us your last batch release. We will show you what it looks like in Simpleafied.</p>
+        <ol class="chain" id="chain">
+          <li style="--i:0"><span class="node"></span><span class="tag mono">GENESIS</span><strong>Grown</strong><span class="muted">Which plants, rooms and harvest lot</span></li>
+          <li style="--i:1"><span class="node"></span><span class="tag mono">NEXUS</span><strong>Tested</strong><span class="muted">Results and certificates for that lot</span></li>
+          <li style="--i:2"><span class="node"></span><span class="tag mono">VERITAS</span><strong>Checked</strong><span class="muted">Open deviations, CAPAs and changes</span></li>
+          <li style="--i:3"><span class="node"></span><span class="tag mono">RULES</span><strong>Judged</strong><span class="muted">Within the target market’s limits?</span></li>
+          <li style="--i:4" class="last"><span class="node"></span><span class="tag mono">RELEASE</span><strong>Decided</strong><span class="muted">The QP sees what blocks it, and signs</span></li>
+        </ol>
+        <p class="note reveal">We are building the connected release view with our first pilot customers, starting with medical-cannabis producers supplying Germany.</p>
       </div>
-      <div class="cta-contact">
-        <a class="btn btn-lime" href="mailto:contact@simpleafied.app?subject=Pilot%20customer">contact@simpleafied.app</a>
+    </section>
+
+    <!-- PRINCIPLES -->
+    <section class="section" id="principles">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow reveal">03 — How we work</p>
+          <h2 class="title reveal" style="--d:1">Built for people who<br><em>answer to an inspector.</em></h2>
+        </div>
+        <div class="principles">
+          <div class="principle reveal"><span class="num mono">01</span><h3>A person decides</h3><p class="muted">The software flags and explains. Qualified people approve, release and sign.</p></div>
+          <div class="principle reveal" style="--d:1"><span class="num mono">02</span><h3>Every result explains itself</h3><p class="muted">Each check shows the rule, the limit and the record behind it. No unexplained scores.</p></div>
+          <div class="principle reveal" style="--d:2"><span class="num mono">03</span><h3>Every action leaves a trail</h3><p class="muted">Electronic signatures need a fresh sign-in, and the audit trail cannot be edited.</p></div>
+          <div class="principle reveal" style="--d:3"><span class="num mono">04</span><h3>Built around the rules</h3><p class="muted">Designed around EU GMP Annex 11 and 21 CFR Part 11. You validate for your intended use; we support it with documents.</p></div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- WHO -->
+    <section class="section" id="who">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow reveal">04 — Who it is for</p>
+          <h2 class="title reveal" style="--d:1">Three kinds of customer,<br><em>often linked to each other.</em></h2>
+        </div>
+        <div class="who">
+          <div class="who-card reveal"><span class="who-k mono">GROW</span><h3>Growers and producers</h3><p class="muted">Licensed medical-cannabis cultivators and GMP manufacturers, many exporting to Germany.</p></div>
+          <div class="who-card reveal" style="--d:1"><span class="who-k mono">TEST</span><h3>Testing laboratories</h3><p class="muted">Labs that test samples and issue certificates, and the producers who order from them.</p></div>
+          <div class="who-card reveal" style="--d:2"><span class="who-k mono">ASSURE</span><h3>Life-sciences QA teams</h3><p class="muted">Biotech companies, CROs and GMP manufacturers with a small quality team.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="cta-orb" aria-hidden="true"></div>
+      <div class="wrap cta-inner">
+        <p class="eyebrow reveal"><span class="pulse"></span>Now taking pilot customers</p>
+        <h2 class="display reveal" style="--d:1">Show us your last<br><em>batch release.</em></h2>
+        <p class="lede reveal" style="--d:2">We will show you what it looks like in Simpleafied.</p>
+        <div class="actions reveal" style="--d:3">
+          <a class="btn btn-lime btn-xl" href="mailto:contact@simpleafied.app?subject=Pilot%20customer">contact@simpleafied.app <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="foot">
-    <div class="wrap foot-inner">
-      <div>
-        <a href="#" class="lockup" aria-label="Simpleafied home">
-          <img src="mark-lime.svg" width="28" height="28" alt="">
+    <div class="wrap">
+      <div class="foot-row">
+        <a href="#top" class="lockup" aria-label="Simpleafied home">
+          <img src="mark-lime.svg" width="26" height="26" alt="">
           <span class="wordmark small">simpleafied<span class="dot">.</span></span>
         </a>
-        <p class="muted">© 2026 Simpleafied Solutions GmbH</p>
+        <nav class="foot-links" aria-label="Footer">
+          <a href="https://veritas.simpleafied.eu" rel="noopener">Veritas ↗</a>
+          <a href="https://genesis.simpleafied.eu" rel="noopener">Genesis ↗</a>
+          <a href="https://nexus.simpleafied.eu" rel="noopener">Nexus ↗</a>
+          <a href="mailto:contact@simpleafied.app">contact@simpleafied.app</a>
+        </nav>
       </div>
-      <nav class="foot-links" aria-label="Footer">
-        <a href="https://veritas.simpleafied.eu" rel="noopener">Veritas ↗</a>
-        <a href="https://genesis.simpleafied.eu" rel="noopener">Genesis ↗</a>
-        <a href="https://nexus.simpleafied.eu" rel="noopener">Nexus ↗</a>
-        <a href="mailto:contact@simpleafied.app">contact@simpleafied.app</a>
-      </nav>
+      <p class="giant" aria-hidden="true">simpleafied<span>.</span></p>
+      <p class="copy muted">© 2026 Simpleafied Solutions GmbH</p>
     </div>
   </footer>
-
 </body>
 </html>
