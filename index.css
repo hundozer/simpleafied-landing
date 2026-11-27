@@ -308,6 +308,8 @@ html.modal-open { overflow: hidden; }
 
 
 /* Cookie consent */
+.legal { text-align: center; font-size: 12.5px; margin-top: 8px; color: var(--text-3); }
+.consent-bar p a, .consent a { color: var(--text); text-underline-offset: 3px; }
 .copy a { color: inherit; text-underline-offset: 3px; }
 .consent-bar { position: fixed; z-index: 60; left: 16px; right: 16px; bottom: 16px; margin: 0 auto; max-width: 760px; display: flex; align-items: center; gap: 20px; padding: 18px 20px; border-radius: 18px; border: 1px solid var(--line-2); background: rgba(19,21,18,.94); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 30px 80px -30px #000; font-size: 14.5px; color: var(--text-2); }
 .consent-bar[hidden] { display: none; }
