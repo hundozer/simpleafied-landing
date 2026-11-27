@@ -99,7 +99,9 @@ h3 { font-family: var(--serif); font-weight: 400; font-size: 30px; line-height: 
 @keyframes drift2 { to { transform: translate(-8vw, -14vh) scale(.9); } }
 @keyframes drift3 { to { transform: translate(14vw, -8vh) scale(1.2); } }
 .gridlines { position: absolute; inset: 0; z-index: -1; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 72px 72px; -webkit-mask-image: radial-gradient(ellipse 70% 60% at 60% 40%, #000 20%, transparent 75%); mask-image: radial-gradient(ellipse 70% 60% at 60% 40%, #000 20%, transparent 75%); }
-.hero .display { font-size: clamp(48px, 6.2vw, 96px); }
+.hero .display { font-size: clamp(40px, 5vw, 76px); line-height: 1; }
+.nowrap { white-space: nowrap; }
+.hero .lede.sub { margin-top: 14px; font-size: clamp(15px, 1.15vw, 17px); color: var(--text-3); }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); gap: 64px; align-items: center; width: 100%; }
 .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
 
