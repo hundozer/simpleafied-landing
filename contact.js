@@ -62,7 +62,7 @@
     fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(d) })
       .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; }); })
       .then(function (res) {
-        if (res.ok && res.j.ok) { if (window.sfTrack) window.sfTrack('generate_lead', { form_topic: d.topic }); form.reset(); form.hidden = true; done.hidden = false; status.textContent = ''; return; }
+        if (res.ok && res.j.ok) { if (window.va) window.va('event', { name: 'generate_lead', data: { topic: d.topic } }); form.reset(); form.hidden = true; done.hidden = false; status.textContent = ''; return; }
         throw new Error(res.j.error || 'failed');
       })
       .catch(function () {

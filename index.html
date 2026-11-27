@@ -22,7 +22,8 @@
   <link rel="stylesheet" href="index.css">
   <script src="index.js" defer></script>
   <script src="contact.js" defer></script>
-  <script src="analytics.js" defer></script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -261,7 +262,7 @@
         </nav>
       </div>
       <p class="giant" aria-hidden="true">simpleafied<span>.</span></p>
-      <p class="copy muted">© 2026 Simpleafied · <a href="privacy.html">Privacy</a> · <a href="#" data-cookie-settings>Cookie settings</a></p>
+      <p class="copy muted">© 2026 Simpleafied · <a href="privacy.html">Privacy</a></p>
       <p class="legal muted">Simpleafied is operated by Zsolt Gálfalvi, Jaurisova 515/4, 140 00 Praha 4, Czech Republic · IČO 05190886 · registered in the Czech Trade Register (Živnostenský rejstřík)</p>
     </div>
   </footer>
@@ -324,12 +325,5 @@
       <div class="contact-actions"><button type="button" class="btn btn-lime" data-close>Close</button></div>
     </div>
   </dialog>
-  <div class="consent-bar" id="consent" role="region" aria-label="Cookie consent" hidden>
-    <p>We’d like to use Google Analytics cookies to see how visitors use this site. Nothing is sent to Google unless you allow it. <a href="privacy.html">Privacy</a></p>
-    <div class="consent-actions">
-      <button type="button" class="btn btn-ghost" data-consent="denied">Decline</button>
-      <button type="button" class="btn btn-lime" data-consent="granted">Allow analytics</button>
-    </div>
-  </div>
 </body>
 </html>
