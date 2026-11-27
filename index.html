@@ -21,6 +21,7 @@
   <link rel="preload" href="fonts/inter-tight-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="index.css">
   <script src="index.js" defer></script>
+  <script src="contact.js" defer></script>
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -37,7 +38,7 @@
         <a href="#principles">Principles</a>
         <a href="#who">Who it is for</a>
       </nav>
-      <a class="btn btn-ghost" href="mailto:contact@simpleafied.app">Contact us</a>
+      <a class="btn btn-ghost" href="mailto:contact@simpleafied.app" data-contact="general">Contact us</a>
     </div>
   </header>
 
@@ -53,7 +54,7 @@
           <h1 class="display reveal" style="--d:1">Every batch,<br>with its <em>evidence.</em></h1>
           <p class="lede reveal" style="--d:2">Simpleafied connects cultivation, laboratory and quality records for regulated producers. Three products that work alone, and work better together.</p>
           <div class="actions reveal" style="--d:3">
-            <a class="btn btn-lime" href="mailto:contact@simpleafied.app?subject=Pilot%20customer">Become a pilot customer <span class="arrow">→</span></a>
+            <a class="btn btn-lime" href="mailto:contact@simpleafied.app?subject=Pilot%20customer" data-contact="pilot">Become a pilot customer <span class="arrow">→</span></a>
             <a class="btn btn-ghost" href="#products">See the products</a>
           </div>
         </div>
@@ -239,8 +240,9 @@
         <h2 class="display reveal" style="--d:1">Show us your last<br><em>batch release.</em></h2>
         <p class="lede reveal" style="--d:2">We will show you what it looks like in Simpleafied.</p>
         <div class="actions reveal" style="--d:3">
-          <a class="btn btn-lime btn-xl" href="mailto:contact@simpleafied.app?subject=Pilot%20customer">contact@simpleafied.app <span class="arrow">→</span></a>
+          <a class="btn btn-lime btn-xl" href="mailto:contact@simpleafied.app?subject=Pilot%20customer" data-contact="pilot">Become a pilot customer <span class="arrow">→</span></a>
         </div>
+        <p class="cta-alt reveal" style="--d:4">Or write to us at <a href="mailto:contact@simpleafied.app">contact@simpleafied.app</a></p>
       </div>
     </section>
   </main>
@@ -263,5 +265,64 @@
       <p class="copy muted">© 2026 Simpleafied Solutions GmbH</p>
     </div>
   </footer>
+
+  <dialog class="contact" id="contact" aria-labelledby="contact-title">
+    <form class="contact-form" id="contact-form" novalidate>
+      <div class="contact-head">
+        <div>
+          <p class="eyebrow"><span class="pulse"></span><span data-topic-label>Pilot customer</span></p>
+          <h2 id="contact-title" class="contact-title">Tell us a little <em>about you.</em></h2>
+          <p class="muted">The founders read every message.</p>
+        </div>
+        <button type="button" class="contact-close" data-close aria-label="Close">×</button>
+      </div>
+
+      <input type="hidden" name="topic" value="pilot">
+      <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+      <div class="fields">
+        <label class="field"><span>Name *</span><input name="name" required maxlength="120" autocomplete="name"></label>
+        <label class="field"><span>Work email *</span><input name="email" type="email" required maxlength="200" autocomplete="email"></label>
+        <label class="field"><span>Company *</span><input name="company" required maxlength="160" autocomplete="organization"></label>
+        <label class="field"><span>Role</span><input name="role" maxlength="120" autocomplete="organization-title" placeholder="e.g. Head of QA"></label>
+        <label class="field"><span>Your organisation is *</span>
+          <select name="orgType" required>
+            <option value="">Choose one</option>
+            <option>Grower or producer</option>
+            <option>Testing laboratory</option>
+            <option>Life-sciences QA team</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label class="field"><span>Country</span><input name="country" maxlength="80" autocomplete="country-name"></label>
+      </div>
+
+      <fieldset class="chips">
+        <legend>Interested in</legend>
+        <label><input type="checkbox" name="interest" value="Veritas"><span>Veritas</span></label>
+        <label><input type="checkbox" name="interest" value="Genesis"><span>Genesis</span></label>
+        <label><input type="checkbox" name="interest" value="Nexus"><span>Nexus</span></label>
+        <label><input type="checkbox" name="interest" value="Connected release"><span>Connected release</span></label>
+        <label><input type="checkbox" name="interest" value="Not sure yet"><span>Not sure yet</span></label>
+      </fieldset>
+
+      <label class="field full"><span>Message</span><textarea name="message" rows="4" maxlength="4000" placeholder="What does your batch release, lab work or QMS look like today?"></textarea></label>
+
+      <label class="consent"><input type="checkbox" name="consent" required><span>I agree that Simpleafied may use these details to reply to me. We don’t add you to a mailing list. *</span></label>
+
+      <p class="form-status" role="status" aria-live="polite"></p>
+      <div class="contact-actions">
+        <button type="button" class="btn btn-ghost" data-close>Cancel</button>
+        <button type="submit" class="btn btn-lime">Send <span class="arrow">→</span></button>
+      </div>
+    </form>
+
+    <div class="contact-done" hidden>
+      <p class="eyebrow"><span class="pulse"></span>Message sent</p>
+      <h2 class="contact-title">Thank you. <em>We’ll be in touch.</em></h2>
+      <p class="muted">We’ve received your details and will reply to your email.</p>
+      <div class="contact-actions"><button type="button" class="btn btn-lime" data-close>Close</button></div>
+    </div>
+  </dialog>
 </body>
 </html>
