@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="index.css">
   <script src="index.js" defer></script>
   <script src="contact.js" defer></script>
+  <script src="analytics.js" defer></script>
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -260,7 +261,7 @@
         </nav>
       </div>
       <p class="giant" aria-hidden="true">simpleafied<span>.</span></p>
-      <p class="copy muted">© 2026 Simpleafied Solutions GmbH</p>
+      <p class="copy muted">© 2026 Simpleafied Solutions GmbH · <a href="#" data-cookie-settings>Cookie settings</a></p>
     </div>
   </footer>
 
@@ -322,5 +323,12 @@
       <div class="contact-actions"><button type="button" class="btn btn-lime" data-close>Close</button></div>
     </div>
   </dialog>
+  <div class="consent-bar" id="consent" role="region" aria-label="Cookie consent" hidden>
+    <p>We’d like to use Google Analytics cookies to see how visitors use this site. Nothing is sent to Google unless you allow it.</p>
+    <div class="consent-actions">
+      <button type="button" class="btn btn-ghost" data-consent="denied">Decline</button>
+      <button type="button" class="btn btn-lime" data-consent="granted">Allow analytics</button>
+    </div>
+  </div>
 </body>
 </html>
